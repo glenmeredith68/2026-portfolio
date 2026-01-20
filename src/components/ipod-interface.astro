@@ -1,0 +1,48 @@
+---
+interface Props {
+  pages: {
+    [key: string]: string;
+  };
+}
+
+const { pages } = Astro.props;
+---
+
+<div class="flex h-screen">
+  <div class="w-1/2 bg-gray-900 text-white p-8">
+    <div class="space-y-4">
+      {Object.keys(pages).map(key => (
+        <button 
+          class="menu-item w-full text-left p-4 hover:bg-gray-700" 
+          data-page={key}
+        >
+          {key.charAt(0).toUpperCase() + key.slice(1)}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="w-1/2 bg-white p-8 overflow-auto">
+    <div id="content"></div>
+  </div>
+</div>
+
+<script define:vars={{ pages }}>
+  const menuItems = document.querySelectorAll('.menu-item');
+  const contentDiv = document.getElementById('content');
+
+  menuItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const page = item.dataset.page;
+      contentDiv.innerHTML = pages[page];
+    });
+  });
+
+  contentDiv.innerHTML = pages[Object.keys(pages)[0]];
+</script>
+
+<style>
+  .menu-item {
+    transition: background-color 0.2s;
+  }
+</style>
