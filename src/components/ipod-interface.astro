@@ -6,15 +6,18 @@ interface Props {
 }
 
 const { pages } = Astro.props;
+const pageKeys = Object.keys(pages);
 ---
 
 <div class="flex h-screen">
-  <div class="w-1/2 bg-gray-900 text-white p-8">
-    <div class="space-y-4">
-      {Object.keys(pages).map(key => (
+  <!-- Left sidebar -->
+  <div class="w-2xs bg-gray-900 text-white p-8 menu-container">
+    <div class="space-y-0">
+      {pageKeys.map((key, index) => (
         <button 
-          class="menu-item w-full text-left p-4 hover:bg-gray-700" 
+          class="menu-item w-full text-left p-4 hover:bg-gray-700 transition-colors text-3xl font-light"
           data-page={key}
+          class:list={[{ active: index === 0 }]}
         >
           {key.charAt(0).toUpperCase() + key.slice(1)}
         </button>
@@ -22,7 +25,8 @@ const { pages } = Astro.props;
     </div>
   </div>
 
-  <div class="w-1/2 bg-white p-8 overflow-auto">
+  <!-- Right content area -->
+  <div class="flex-1 bg-white p-8 overflow-auto">
     <div id="content"></div>
   </div>
 </div>
@@ -30,19 +34,59 @@ const { pages } = Astro.props;
 <script define:vars={{ pages }}>
   const menuItems = document.querySelectorAll('.menu-item');
   const contentDiv = document.getElementById('content');
+  const menuContainer = document.querySelector('.menu-container');
+  let selectedPage = Object.keys(pages)[0];
 
+  // Click to select
   menuItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      const page = item.dataset.page;
-      contentDiv.innerHTML = pages[page];
+    item.addEventListener('click', () => {
+      menuItems.forEach(m => m.classList.remove('active'));
+      item.classList.add('active');
+      selectedPage = item.dataset.page;
+      contentDiv.innerHTML = pages[selectedPage];
     });
   });
 
-  contentDiv.innerHTML = pages[Object.keys(pages)[0]];
+  // Hover to preview
+  menuItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const page = item.dataset.page;
+      contentDiv.classList.add('fade-out');
+      setTimeout(() => {
+        contentDiv.innerHTML = pages[page];
+        contentDiv.classList.remove('fade-out');
+      }, 150);
+    });
+  });
+
+  // Only revert when leaving the entire menu
+  menuContainer.addEventListener('mouseleave', () => {
+    contentDiv.classList.add('fade-out');
+    setTimeout(() => {
+      contentDiv.innerHTML = pages[selectedPage];
+      contentDiv.classList.remove('fade-out');
+    }, 150);
+  });
+
+  // Show default page
+  contentDiv.innerHTML = pages[selectedPage];
 </script>
 
 <style>
   .menu-item {
     transition: background-color 0.2s;
+  }
+
+  .menu-item.active {
+    background-color: rgb(55, 65, 81);
+    border-left: 4px solid rgb(59, 130, 246);
+  }
+
+  #content {
+    transition: opacity 0.15s ease-out;
+  }
+
+  #content.fade-out {
+    opacity: 0;
   }
 </style>
