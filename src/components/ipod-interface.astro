@@ -37,6 +37,55 @@ const pageKeys = Object.keys(pages);
   const menuContainer = document.querySelector('.menu-container');
   let selectedPage = Object.keys(pages)[0];
 
+  // Initialize scroll animations
+  function initScrollAnimations() {
+    const elements = document.querySelectorAll(
+      '.portfolio-image-left, .portfolio-image-right, .portfolio-text, .portfolio-section'
+    );
+    
+    if (elements.length === 0) return;
+    
+    // First, remove animation classes so they can be re-triggered
+    elements.forEach(el => {
+      el.classList.remove('animate-slide-in-left', 'animate-slide-in-right', 'animate-fade-in-up', 'animate-fade-in');
+    });
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          
+          if (el.classList.contains('portfolio-image-left')) {
+            el.classList.add('animate-slide-in-left');
+          } else if (el.classList.contains('portfolio-image-right')) {
+            el.classList.add('animate-slide-in-right');
+          } else if (el.classList.contains('portfolio-text')) {
+            el.classList.add('animate-fade-in-up');
+          } else if (el.classList.contains('portfolio-section')) {
+            el.classList.add('animate-fade-in');
+          }
+          
+          observer.unobserve(el);
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '50px 0px 0px 0px'
+    });
+
+    elements.forEach(el => observer.observe(el));
+  }
+
+  function resetAndInitializeAnimations() {
+    document.querySelectorAll(
+      '.animate-slide-in-left, .animate-slide-in-right, .animate-fade-in-up, .animate-fade-in'
+    ).forEach(el => {
+      el.classList.remove('animate-slide-in-left', 'animate-slide-in-right', 'animate-fade-in-up', 'animate-fade-in');
+    });
+    
+    setTimeout(initScrollAnimations, 50);
+  }
+
   // Click to select
   menuItems.forEach(item => {
     item.addEventListener('click', () => {
@@ -44,6 +93,7 @@ const pageKeys = Object.keys(pages);
       item.classList.add('active');
       selectedPage = item.dataset.page;
       contentDiv.innerHTML = pages[selectedPage];
+      resetAndInitializeAnimations();
     });
   });
 
@@ -65,11 +115,13 @@ const pageKeys = Object.keys(pages);
     setTimeout(() => {
       contentDiv.innerHTML = pages[selectedPage];
       contentDiv.classList.remove('fade-out');
+      resetAndInitializeAnimations();
     }, 150);
   });
 
   // Show default page
   contentDiv.innerHTML = pages[selectedPage];
+  resetAndInitializeAnimations();
 </script>
 
 <style>
@@ -89,4 +141,76 @@ const pageKeys = Object.keys(pages);
   #content.fade-out {
     opacity: 0;
   }
+
+  /* Initial hidden state - must come first */
+  .portfolio-image-left,
+  .portfolio-image-right,
+  .portfolio-text,
+  .portfolio-section {
+    opacity: 0 !important;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards !important;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards !important;
+  }
+
+  .portfolio-image:nth-child(1) { animation-delay: 0s; }
+  .portfolio-image:nth-child(2) { animation-delay: 0.15s; }
+  .portfolio-image:nth-child(3) { animation-delay: 0.3s; }
+  .portfolio-image:nth-child(4) { animation-delay: 0.45s; }
+  .portfolio-image:nth-child(5) { animation-delay: 0.6s; }
 </style>
