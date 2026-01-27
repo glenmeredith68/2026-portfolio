@@ -1,7 +1,10 @@
 ---
 interface Props {
   pages: {
-    [key: string]: string;
+    [key: string]: {
+      title: string;
+      content: string;
+    };
   };
 }
 
@@ -20,7 +23,7 @@ const pageKeys = Object.keys(pages);
             data-page={key}
             class:list={[{ active: index === 0 }]}
           >
-            {key.charAt(0).toUpperCase() + key.slice(1)}
+            {pages[key].title}
           </button>
         ))
       }
@@ -85,7 +88,7 @@ const pageKeys = Object.keys(pages);
 
   // Helper to swap content and re-trigger animations
   function updateContent(pageKey) {
-    contentDiv.innerHTML = pages[pageKey];
+    contentDiv.innerHTML = pages[pageKey].content;
     console.log("Content inserted:", contentDiv.innerHTML);
     // Wait for the next tick to ensure DOM is updated
     setTimeout(() => {
