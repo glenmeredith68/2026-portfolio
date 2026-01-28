@@ -49,13 +49,14 @@ h1, h2, h3, h4 {
 
 /* Gradient backgrounds */
 .hero-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     /* background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); teal blue*/
     /* background: linear-gradient(135deg, #1e40af 0%, #0f172a 100%); navy*/
     /* background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%); light green */
     /* background: linear-gradient(135deg, #f97316 0%, #dc2626 100%); orange */
-    /* background: linear-gradient(135deg, #10573d 0%, #064e3b 100%);   */
+    background: linear-gradient(135deg, #10573d 0%, #064e3b 100%);  
     /* british racing */
+    /* background: linear-gradient(135deg, #007A33 0%, #13844a 100%); uvu gradient lol */
 }
 
 .diagonal-section {
