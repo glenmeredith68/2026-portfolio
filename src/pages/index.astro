@@ -2,9 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import IpodPortfolio from "../components/ipod-interface.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Glen's Portfolio | Home">
@@ -18,133 +15,479 @@ import IpodPortfolio from "../components/ipod-interface.astro";
 				title: "Resume",
 				content:'<h1 class="text-4xl font-bold">My Resume</h1>...'},
 			project1: {
-				title: "Magic Mirror",
-				content: `<div class="space-y-12">
-  <div class="mb-16 portfolio-section">
-    <h1 class="text-5xl font-bold mb-6 portfolio-text">Magic Mirror</h1>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl portfolio-text">Magic Mirror is a hypothetical interface for a full-length mirror that helps users plan outfits by integrating weather, schedule, and closet management. As a UX designer, I focused on simplifying the outfit-planning process and improving usability through iterative design.</p>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mt-4 portfolio-text">Users struggled with planning outfits due to unpredictable weather and busy schedules. Our goal was to create a seamless way to visualize outfits, check weather, and plan ahead.</p>
-  </div>
-
-  <div class="portfolio-section">
-    <h2 class="text-4xl font-bold mb-8 portfolio-text">Audience</h2>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl portfolio-text">With this in mind we considered who our audience would be and why they would use this product.</p>
-  </div>
-
-  <div class="grid grid-cols-2 gap-8 my-12">
-    <div class="portfolio-image portfolio-image-left">
-      <img src="https://placehold.co/400x500?text=Persona+1" alt="User Persona 1" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Persona Research</p>
+			    title: "Magic Mirror",
+			    content: `
+<!-- Hero Section -->
+<section class="hero-gradient text-white py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+        <div class="mb-6">
+            <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+                UX Design · 2 Weeks · Team of 3
+            </span>
+        </div>
+        <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">Magic Mirror</h1>
+        <p class="text-2xl md:text-3xl font-light max-w-2xl leading-relaxed opacity-90">
+            A smart closet interface that eliminates outfit planning stress through integrated weather, schedule, and wardrobe management.
+        </p>
     </div>
-    <div class="portfolio-image portfolio-image-right">
-      <img src="https://placehold.co/400x500?text=Persona+2" alt="User Persona 2" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Target Users</p>
+</section>
+
+<div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Hero Image -->
+    <div class="scroll-reveal mb-24 -mt-16 relative z-10">
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <img src="https://placehold.co/1400x800?text=Final+Mirror+Interface" alt="Final Magic Mirror interface" class="w-full" />
+        </div>
+        <p class="text-center text-gray-500 mt-6 text-sm uppercase tracking-wider">Final Design · Mirror Home Screen</p>
     </div>
-  </div>
 
-  <div class="portfolio-section">
-    <h2 class="text-4xl font-bold mb-8 portfolio-text">Competitive Analysis</h2>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl portfolio-text">We did a competitive analysis to see what other options on the market had to offer, and what opportunities we could take advantage of.</p>
-  </div>
-
-  <div class="my-12 portfolio-image portfolio-image-left">
-    <img src="https://placehold.co/800x400?text=Competitive+Analysis" alt="Competitive Analysis" class="w-full rounded-lg shadow-lg" />
-    <p class="text-center text-gray-600 mt-4 text-sm">Market Opportunities</p>
-  </div>
-
-  <div class="portfolio-section mt-16">
-    <h2 class="text-4xl font-bold mb-8 portfolio-text">Brainstorming</h2>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl portfolio-text">These are a few sketches we did to get our ideas to feel more tangible. Sketching is great because it allows me to get my ideas out fast without worrying about pixel perfection.</p>
-  </div>
-
-  <div class="my-12 space-y-6">
-    <div class="portfolio-image portfolio-image-left">
-      <img src="https://placehold.co/600x400?text=Sketch+1" alt="Initial sketches" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Initial Concepts</p>
+    <!-- The Problem -->
+    <div class="grid md:grid-cols-5 gap-12 mb-32 scroll-reveal">
+        <div class="md:col-span-3">
+            <h2 class="text-5xl font-black mb-8 leading-tight">The Problem</h2>
+            <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p class="text-2xl font-medium text-gray-900">
+                    Planning what to wear is a daily frustration that wastes time and mental energy.
+                </p>
+                <p>People pull out multiple outfits, change several times, and still walk outside unprepared for the weather or day's activities.</p>
+                <div class="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg my-8">
+                    <p class="font-bold text-purple-900 mb-2">Design Goal</p>
+                    <p class="text-gray-700">Create a smart mirror interface that displays closet, weather, and schedule in one glanceable view.</p>
+                </div>
+            </div>
+        </div>
+        <div class="md:col-span-2">
+            <div class="bg-gray-900 text-white rounded-2xl p-8">
+                <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-6">Project Details</h3>
+                <div class="space-y-6">
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Role</p><p class="text-xl font-bold">UX Designer</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Duration</p><p class="text-xl font-bold">2 Weeks</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Team</p><p class="text-xl font-bold">3 Designers</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Tools</p><p class="text-xl font-bold">Figma, ChatGPT</p></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="portfolio-image portfolio-image-right">
-      <img src="https://placehold.co/600x400?text=Sketch+2" alt="Refined sketches" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Refined Ideas</p>
-    </div>
-  </div>
 
-  <div class="portfolio-section mt-16">
-    <h2 class="text-4xl font-bold mb-8 portfolio-text">Drafting a Design</h2>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl portfolio-text">Once we had the basic ideas and sketches we moved on to creating a first draft of our design for both the mobile app and the mirror overlay. We were pressed for time, and so when we started making greybox wireframes, one of my teammates made the executive decision to go straight to hi-fi.</p>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mt-4 portfolio-text">One of the first issues we faced was how the different clothing should be presented on the app and the mirror that would be cohesive and easily understood.</p>
-  </div>
+    <!-- Understanding Users -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Understanding<br/>Users</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="text-5xl font-black number-badge mb-4">01</div>
+                <h3 class="text-2xl font-bold mb-3">Weather</h3>
+                <p class="text-gray-600 text-lg">What's the temperature and forecast? Will I need an umbrella or jacket?</p>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="text-5xl font-black number-badge mb-4">02</div>
+                <h3 class="text-2xl font-bold mb-3">Schedule</h3>
+                <p class="text-gray-600 text-lg">Work meeting, job interview, casual dinner, or gym session?</p>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="text-5xl font-black number-badge mb-4">03</div>
+                <h3 class="text-2xl font-bold mb-3">Preferences</h3>
+                <p class="text-gray-600 text-lg">Personal style, comfort levels, and what makes you feel confident.</p>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="text-5xl font-black number-badge mb-4">04</div>
+                <h3 class="text-2xl font-bold mb-3">Availability</h3>
+                <p class="text-gray-600 text-lg">What clothes are clean and accessible in your closet right now?</p>
+            </div>
+        </div>
 
-  <div class="grid grid-cols-3 gap-6 my-12">
-    <div class="portfolio-image portfolio-image-left">
-      <img src="https://placehold.co/300x500?text=Original+Mirror" alt="Original mirror design" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Original Mirror Home</p>
+        <div class="bg-gradient-to-br from-purple-600 to-indigo-700 text-white rounded-2xl p-12 diagonal-section">
+            <div class="max-w-3xl">
+                <p class="text-sm uppercase tracking-wider mb-4 opacity-80">Key Insight</p>
+                <p class="text-3xl md:text-4xl font-bold leading-snug">
+                    While weather apps and closet apps exist separately, no solution combines wardrobe, weather, and calendar in a single glanceable interface.
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="portfolio-image portfolio-image-right">
-      <img src="https://placehold.co/300x500?text=Mobile+Design" alt="Mobile design" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Mobile Home</p>
-    </div>
-    <div class="portfolio-image portfolio-image-left">
-      <img src="https://placehold.co/300x500?text=Updated+Design" alt="Updated design" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Updated Home</p>
-    </div>
-  </div>
 
-  <div class="portfolio-section mt-16">
-    <h2 class="text-4xl font-bold mb-8 portfolio-text">Usability Testing</h2>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl portfolio-text">We did some usability testing. I created a script with six tasks for users to try and complete. Reactions were really positive to the concept of the product.</p>
-  </div>
-
-  <div class="my-12 bg-gray-50 p-8 rounded-lg portfolio-section">
-    <h3 class="text-2xl font-bold mb-6 portfolio-text">Key Findings</h3>
-    <ul class="space-y-4 text-lg text-gray-700 portfolio-text">
-      <li class="flex items-start">
-        <span class="font-bold mr-4 text-blue-600">1.</span>
-        <span>Users have a really hard time finding the '+' button to add an item of clothing to today's outfit.</span>
-      </li>
-      <li class="flex items-start">
-        <span class="font-bold mr-4 text-blue-600">2.</span>
-        <span>Most users did not figure out that the row of clothes for today's outfit was scrollable horizontally.</span>
-      </li>
-      <li class="flex items-start">
-        <span class="font-bold mr-4 text-blue-600">3.</span>
-        <span>When it comes to checking the calendar on Mobile, users had a hard time telling what things meant.</span>
-      </li>
-      <li class="flex items-start">
-        <span class="font-bold mr-4 text-blue-600">4.</span>
-        <span>The weather screen on the mirror was poorly organized, with users thinking that both columns were part of the same set.</span>
-      </li>
-    </ul>
-  </div>
-
-  <div class="portfolio-section mt-16">
-    <h2 class="text-4xl font-bold mb-8 portfolio-text">Revisions</h2>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl portfolio-text">I went through and moved the '+' button to the front of the row on the home screen of the mirror. I also completely redid the weather page for the mirror after consulting with ChatGPT and exploring other interfaces' weather pages.</p>
-  </div>
-
-  <div class="grid grid-cols-2 gap-8 my-12">
-    <div class="portfolio-image portfolio-image-left">
-      <img src="https://placehold.co/400x600?text=Original+Weather" alt="Original weather page" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Original Weather Page</p>
+    <!-- Competitive Analysis -->
+    <div class="mb-32 scroll-reveal">
+        <div class="grid md:grid-cols-3 gap-12 mb-12">
+            <div class="md:col-span-1">
+                <h2 class="text-5xl font-black mb-6 leading-tight">Competitive<br/>Analysis</h2>
+            </div>
+            <div class="md:col-span-2">
+                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                    We analyzed existing solutions to identify market gaps and design opportunities.
+                </p>
+                <div class="image-float">
+                    <img src="https://placehold.co/1200x600?text=Competitive+Analysis+Grid" alt="Competitive analysis" class="w-full rounded-xl shadow-lg" />
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="portfolio-image portfolio-image-right">
-      <img src="https://placehold.co/400x600?text=Updated+Weather" alt="Updated weather page" class="w-full rounded-lg shadow-lg" />
-      <p class="text-center text-gray-600 mt-4 text-sm">Final Weather Page</p>
-    </div>
-  </div>
 
-  <div class="portfolio-section mt-16">
-    <h2 class="text-4xl font-bold mb-8 portfolio-text">Takeaways</h2>
-    <div class="space-y-6">
-      <div class="bg-blue-50 p-6 rounded-lg portfolio-text">
-        <h3 class="text-xl font-bold text-blue-900 mb-2">ChatGPT as Design Advisor</h3>
-        <p class="text-lg text-gray-700">ChatGPT can be a valuable design advisor, as long as you keep in mind the role it plays in the bigger picture.</p>
-      </div>
-      <div class="bg-blue-50 p-6 rounded-lg portfolio-text">
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Team Communication</h3>
-        <p class="text-lg text-gray-700">Communication among group members can make design faster and better. I had a breakthrough when I adopted my teammate's strategy.</p>
-      </div>
+    <!-- Initial Exploration -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight">Initial<br/>Exploration</h2>
+        <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mb-16">
+            Sketching allowed us to explore concepts rapidly without worrying about pixel perfection. The focus was on ideas, not polish.
+        </p>
+        
+        <div class="space-y-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 image-float">
+                    <img src="https://placehold.co/800x500?text=Early+Sketches" alt="Initial concept sketches" class="w-full rounded-xl shadow-lg" />
+                    <p class="text-gray-500 mt-4 text-sm">Early concept exploration</p>
+                </div>
+                <div class="bg-purple-50 rounded-xl p-8 flex items-center">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Key Questions</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li>• Mirror or mobile app?</li>
+                            <li>• Individual items vs. complete outfits?</li>
+                            <li>• Essential vs. nice-to-have features?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <!-- The Flatlay Challenge -->
+    <div class="mb-32 scroll-reveal">
+        <div class="bg-white rounded-2xl p-12 md:p-16 shadow-xl">
+            <span class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium mb-6">Design Challenge</span>
+            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">The Flatlay Problem</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        My initial approach was a "flatlay" layout—displaying clothes in the order they're worn (hats → jackets → pants → shoes). It felt immersive and natural.
+                    </p>
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        <strong>The problem:</strong> I couldn't make it work aesthetically. The spacing felt awkward, and it didn't scale across different screen sizes.
+                    </p>
+                </div>
+                <div class="image-float">
+                    <img src="https://placehold.co/400x700?text=Original+Flatlay+Design" alt="Original flatlay attempt" class="w-full rounded-xl shadow-lg mx-auto max-w-sm" />
+                    <p class="text-center text-gray-500 mt-4 text-sm">Original approach - flatlay layout</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collaborative Breakthrough -->
+    <div class="mb-32 scroll-reveal">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">Breakthrough</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Team Collaboration Wins</h2>
+                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                    My teammate Shelby had designed the mobile app using a horizontal scrolling card layout. After reviewing her work, I realized this approach was:
+                </p>
+                <ul class="space-y-4 text-lg text-gray-700">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        More flexible for different screen sizes
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Easier to scan quickly
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Consistent across platforms
+                    </li>
+                </ul>
+                <div class="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg mt-8">
+                    <p class="text-gray-700 italic">
+                        "Even though the flatlay was more immersive, cross-platform consistency was more valuable."
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="image-float">
+                    <img src="https://placehold.co/400x700?text=Mobile+Design" alt="Shelby's mobile design" class="w-full rounded-xl shadow-lg mx-auto max-w-sm" />
+                    <p class="text-center text-gray-500 mt-4 text-sm">Shelby's card-based approach</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Usability Testing -->
+    <div class="mb-32 scroll-reveal">
+        <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-12 md:p-16">
+            <h2 class="text-5xl md:text-6xl font-black mb-6 leading-tight">Usability<br/>Testing</h2>
+            <p class="text-2xl opacity-90 mb-12 max-w-2xl">Testing with 5 users revealed critical usability issues we never anticipated.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                    <div class="text-4xl font-black text-red-400 mb-4">01</div>
+                    <h3 class="text-2xl font-bold mb-3">Invisible '+' Button</h3>
+                    <p class="text-gray-300 text-lg">0/5 users could find the button to add clothing without prompting—it was buried at the end of a scrollable row.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                    <div class="text-4xl font-black text-red-400 mb-4">02</div>
+                    <h3 class="text-2xl font-bold mb-3">Hidden Scrolling</h3>
+                    <p class="text-gray-300 text-lg">Users didn't realize the clothing row scrolled horizontally—they thought what they saw was everything.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                    <div class="text-4xl font-black text-red-400 mb-4">03</div>
+                    <h3 class="text-2xl font-bold mb-3">Confusing Calendar</h3>
+                    <p class="text-gray-300 text-lg">Calendar icons and date indicators were misinterpreted—users couldn't distinguish their meaning.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                    <div class="text-4xl font-black text-red-400 mb-4">04</div>
+                    <h3 class="text-2xl font-bold mb-3">Messy Weather Layout</h3>
+                    <p class="text-gray-300 text-lg">Users confused hourly and daily forecasts, treating the two-column layout as a single dataset.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-white/20 pt-8">
+                <p class="text-xl italic opacity-90">"I love getting feedback like this because it's like a light comes on when I'm designing. I can see! I know what the users need."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solutions -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Iterating on<br/>Feedback</h2>
+
+        <!-- Solution 1 -->
+        <div class="mb-24">
+            <div class="bg-green-50 inline-block px-6 py-3 rounded-full mb-8">
+                <span class="text-green-800 font-bold">Solution 1</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-8">Making the '+' Button Discoverable</h3>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <div class="bg-red-50 px-4 py-2 inline-block rounded-full mb-4">
+                        <span class="text-red-700 font-medium text-sm">Before</span>
+                    </div>
+                    <div class="image-float">
+                        <img src="https://placehold.co/500x800?text=Hidden+Button" alt="Before - hidden button" class="w-full rounded-xl shadow-lg" />
+                    </div>
+                    <p class="text-gray-600 mt-4">Button buried at end of scrollable row</p>
+                </div>
+                <div>
+                    <div class="bg-green-50 px-4 py-2 inline-block rounded-full mb-4">
+                        <span class="text-green-700 font-medium text-sm">After</span>
+                    </div>
+                    <div class="image-float">
+                        <img src="https://placehold.co/500x800?text=Prominent+Button" alt="After - prominent button" class="w-full rounded-xl shadow-lg" />
+                    </div>
+                    <p class="text-gray-600 mt-4">Prominent '+' button at the front (inspired by Facebook Stories)</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 rounded-xl p-8">
+                <p class="text-lg text-gray-700"><strong>Impact:</strong> 5/5 users successfully added clothing items in follow-up testing.</p>
+            </div>
+        </div>
+
+        <!-- Solution 2 -->
+        <div>
+            <div class="bg-green-50 inline-block px-6 py-3 rounded-full mb-8">
+                <span class="text-green-800 font-bold">Solution 2</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-8">Redesigning the Weather Interface with AI Assistance</h3>
+            
+            <div class="bg-purple-50 border-l-4 border-purple-600 p-8 rounded-r-xl mb-12">
+                <h4 class="font-bold text-xl mb-4 text-purple-900">ChatGPT's Recommendations</h4>
+                <ul class="space-y-3 text-gray-700 text-lg">
+                    <li>• Add a prominent current conditions section at the top</li>
+                    <li>• Make hourly and 10-day forecasts horizontally scrollable</li>
+                    <li>• Use distinct visual styling to differentiate forecast types</li>
+                </ul>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="image-float">
+                    <img src="https://placehold.co/350x600?text=Original+Weather" alt="Original weather" class="w-full rounded-xl shadow-lg" />
+                    <p class="text-center text-gray-600 mt-4 text-sm">Original: Confusing two-column layout</p>
+                </div>
+                <div class="image-float">
+                    <img src="https://placehold.co/350x600?text=ChatGPT+Suggestions" alt="ChatGPT suggestions" class="w-full rounded-xl shadow-lg" />
+                    <p class="text-center text-gray-600 mt-4 text-sm">ChatGPT's suggestion mock-up</p>
+                </div>
+                <div class="image-float">
+                    <img src="https://placehold.co/350x600?text=Final+Weather" alt="Final weather" class="w-full rounded-xl shadow-lg" />
+                    <p class="text-center text-gray-600 mt-4 text-sm">Final: Clear hierarchy and scrolling</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 rounded-xl p-8">
+                <p class="text-lg text-gray-700"><strong>Impact:</strong> Weather comprehension time dropped from 45+ seconds to under 10 seconds.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Design -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Final<br/>Design</h2>
+        
+        <div class="space-y-16">
+            <div class="image-float">
+                <img src="https://placehold.co/1400x900?text=Final+Mirror+Interface" alt="Final mirror interface" class="w-full rounded-2xl shadow-2xl" />
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">Prominent '+' Button</h4>
+                    <p class="text-sm text-gray-600">Easy clothing addition</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">Scrollable Preview</h4>
+                    <p class="text-sm text-gray-600">Browse full outfit</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">Weather At-a-Glance</h4>
+                    <p class="text-sm text-gray-600">Current conditions prominent</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">Quick Access</h4>
+                    <p class="text-sm text-gray-600">Settings & detailed weather</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impact -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Impact</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12 mb-12">
+            <div class="bg-red-50 rounded-2xl p-10">
+                <p class="text-sm uppercase tracking-wider text-red-700 mb-4">Before Iteration</p>
+                <div class="space-y-4">
+                    <div class="flex items-baseline">
+                        <span class="text-5xl font-black text-red-600">0/5</span>
+                        <span class="ml-4 text-gray-700">users found the '+' button</span>
+                    </div>
+                    <div class="flex items-baseline">
+                        <span class="text-5xl font-black text-red-600">45s</span>
+                        <span class="ml-4 text-gray-700">to understand weather layout</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-green-50 rounded-2xl p-10">
+                <p class="text-sm uppercase tracking-wider text-green-700 mb-4">After Iteration</p>
+                <div class="space-y-4">
+                    <div class="flex items-baseline">
+                        <span class="text-5xl font-black text-green-600">5/5</span>
+                        <span class="ml-4 text-gray-700">users successfully added clothing</span>
+                    </div>
+                    <div class="flex items-baseline">
+                        <span class="text-5xl font-black text-green-600">10s</span>
+                        <span class="ml-4 text-gray-700">to scan weather information</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-purple-600">
+                <p class="text-xl text-gray-700 italic mb-4">"I would actually use this every morning—it solves a real problem I have."</p>
+                <p class="text-sm text-gray-500">— Usability Test Participant</p>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-purple-600">
+                <p class="text-xl text-gray-700 italic mb-4">"The weather layout makes so much more sense now. I can see what I need immediately."</p>
+                <p class="text-sm text-gray-500">— Usability Test Participant</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Takeaways -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Key<br/>Takeaways</h2>
+        
+        <div class="space-y-8">
+            <div class="bg-gradient-to-br from-purple-600 to-indigo-700 text-white rounded-2xl p-10">
+                <div class="text-4xl font-black mb-6">01</div>
+                <h3 class="text-3xl font-bold mb-4">AI as Design Advisor</h3>
+                <p class="text-xl opacity-90 mb-6 leading-relaxed">
+                    ChatGPT helped me identify established UI patterns I hadn't considered, but I still needed to validate suggestions, adapt to our context, and make final decisions based on usability principles.
+                </p>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <p class="italic"><strong>Learning:</strong> AI tools accelerate research and ideation, but human judgment is essential for contextual design decisions.</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-2xl p-10">
+                <div class="text-4xl font-black mb-6">02</div>
+                <h3 class="text-3xl font-bold mb-4">Collaboration Over Individual Vision</h3>
+                <p class="text-xl opacity-90 mb-6 leading-relaxed">
+                    I was attached to the flatlay concept because it felt "innovative," but Shelby's card layout was clearly superior when I evaluated both objectively. Setting ego aside led to a better solution.
+                </p>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <p class="italic"><strong>Learning:</strong> The best design isn't always the most novel—sometimes it's the one that works seamlessly across platforms.</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-pink-600 to-rose-600 text-white rounded-2xl p-10">
+                <div class="text-4xl font-black mb-6">03</div>
+                <h3 class="text-3xl font-bold mb-4">Testing Reveals the Invisible</h3>
+                <p class="text-xl opacity-90 mb-6 leading-relaxed">
+                    The '+' button was perfectly visible to me because I designed it. The weather columns made sense to me because I created them. Users saw neither.
+                </p>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <p class="italic"><strong>Learning:</strong> Designer's curse of knowledge is real. Even informal testing reveals critical blind spots.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What's Next -->
+    <div class="mb-24 scroll-reveal">
+        <div class="bg-gray-900 text-white rounded-2xl p-12 md:p-16">
+            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">What I'd Do<br/>Differently</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-3 text-purple-400">Conduct Upfront Research</h4>
+                    <p class="text-gray-300">Interview 5-10 users about outfit planning to reveal needs we missed when relying on our own assumptions.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-3 text-purple-400">More Low-Fi Iteration</h4>
+                    <p class="text-gray-300">Gray-box wireframes would have let us test more layout variations before committing to high-fidelity.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-3 text-purple-400">Test Physical Context</h4>
+                    <p class="text-gray-300">Test with users standing in front of an actual mirror to reveal distance, angle, and lighting considerations.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-3 text-purple-400">Explore Input Methods</h4>
+                    <p class="text-gray-300">Design the wardrobe management flow—how users photograph and categorize their clothes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 `},
 			project2: {

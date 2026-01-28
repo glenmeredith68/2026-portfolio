@@ -86,6 +86,32 @@ const pageKeys = Object.keys(pages);
     elements.forEach((el) => observer.observe(el));
   }
 
+  // NEW: Scroll reveal observer for new case study
+  let scrollObserver;
+  function initNewScrollAnimations() {
+    if (scrollObserver) scrollObserver.disconnect();
+
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    
+    if (revealElements.length > 0) {
+      scrollObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -100px 0px'
+        }
+      );
+
+      revealElements.forEach(el => scrollObserver.observe(el));
+    }
+  }
+
   // Helper to swap content and re-trigger animations
   function updateContent(pageKey) {
     contentDiv.innerHTML = pages[pageKey].content;
@@ -93,6 +119,7 @@ const pageKeys = Object.keys(pages);
     // Wait for the next tick to ensure DOM is updated
     setTimeout(() => {
       initScrollAnimations();
+      initNewScrollAnimations();
     }, 0);
   }
 

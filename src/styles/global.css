@@ -30,3 +30,69 @@
 .animate-fade-in {
   animation: fadeIn 1s ease-out forwards;
 }
+
+
+/* ========================================
+   MAGIC MIRROR CASE STUDY STYLES
+   ======================================== */
+
+/* Fonts */
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Gradient backgrounds */
+.hero-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.diagonal-section {
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+}
+
+.number-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Scroll reveal animations */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image hover effects */
+.image-float {
+    transition: transform 0.3s ease;
+}
+
+.image-float:hover {
+    transform: translateY(-8px);
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    
+    .image-float:hover {
+        transform: none;
+    }
+}
