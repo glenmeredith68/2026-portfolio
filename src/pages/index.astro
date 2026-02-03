@@ -5,18 +5,19 @@ import IpodPortfolio from "../components/ipod-interface.astro";
 ---
 
 <Layout title="Glen's Portfolio | Home">
-	<IpodPortfolio
-		pages={{
-			home: {
-				title: "Home",
-				content: '<h1 class="text-4xl font-bold">Welcome</h1>...'
-			},
-			resume: {
-				title: "Resume",
-				content:'<h1 class="text-4xl font-bold">My Resume</h1>...'},
-			project1: {
-			    title: "Magic Mirror",
-			    content: `
+    <IpodPortfolio
+        pages={{
+            home: {
+                title: "Home",
+                content: '<h1 class="text-4xl font-bold">Welcome</h1>...',
+            },
+            resume: {
+                title: "Resume",
+                content: '<h1 class="text-4xl font-bold">My Resume</h1>...',
+            },
+            project1: {
+                title: "Magic Mirror",
+                content: `
 <!-- Hero Section -->
 <section class="hero-gradient text-white py-24 px-6">
     <div class="max-w-5xl mx-auto">
@@ -489,16 +490,17 @@ import IpodPortfolio from "../components/ipod-interface.astro";
     </div>
 
 </div>
-`},
-			// PASTE THIS CONTENT into src/pages/index.astro
-// Replace the entire project2 object with this:
+`,
+            },
+            // PASTE THIS CONTENT into src/pages/index.astro
+            // Replace the entire project2 object with this:
 
-// PASTE THIS CONTENT into src/pages/index.astro
-// Replace the entire project2 object with this REWRITTEN version:
+            // PASTE THIS CONTENT into src/pages/index.astro
+            // Replace the entire project2 object with this REWRITTEN version:
 
-project2: {
-    title: "National Park App",
-    content: `
+            project2: {
+                title: "National Park App",
+                content: `
 <!-- Hero Section -->
 <section class="hero-gradient text-white py-24 px-6">
     <div class="max-w-5xl mx-auto">
@@ -1082,51 +1084,53 @@ project2: {
     </div>
 
 </div>
-`
-},
+`,
+            },
 project3: {
-        title: "Family Promise Salt Lake",
-        content: `
+    title: "Family Promise",
+    content: `
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white py-24 px-6">
+<section class="hero-gradient text-white py-24 px-6">
     <div class="max-w-5xl mx-auto">
         <div class="mb-6">
             <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-                UX Research · 2 Months · Team of 2
+                UX Research · Information Architecture · 5 Weeks
             </span>
         </div>
-        <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">Family Promise Salt Lake</h1>
+        <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">Family Promise</h1>
         <p class="text-2xl md:text-3xl font-light max-w-2xl leading-relaxed opacity-90">
-            Redesigning a nonprofit’s sitemap using card sorting and data visualization to improve usability and trust.
+            Using card sorting and data visualization to transform a cluttered nonprofit website into a clear, trust-building resource.
         </p>
     </div>
 </section>
 
 <div class="max-w-7xl mx-auto px-6">
-    <!-- Hero Image -->
+    
+    <!-- Hero Image - Before/After Sitemap -->
     <div class="scroll-reveal mb-24 -mt-16 relative z-10">
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <img src="https://placehold.co/1400x800?text=Before+and+After+Sitemap" alt="Before/After Sitemap Comparison" class="w-full" />
+            <img src="https://placehold.co/1400x800?text=Before+After+Sitemap+Comparison" alt="Sitemap before and after redesign" class="w-full" />
         </div>
-        <p class="text-center text-gray-500 mt-6 text-sm uppercase tracking-wider">Before/After: Streamlined from 19 to 8 pages</p>
+        <p class="text-center text-gray-500 mt-6 text-sm uppercase tracking-wider">19 Pages → 6 Main Sections</p>
     </div>
 
-    <!-- The Problem -->
+    <!-- Introduction -->
     <div class="grid md:grid-cols-5 gap-12 mb-32 scroll-reveal">
         <div class="md:col-span-3">
-            <h2 class="text-5xl font-black mb-8 leading-tight">The Problem</h2>
+            <h2 class="text-5xl font-black mb-8 leading-tight">From Chaos to Clarity</h2>
             <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p class="text-2xl font-medium text-gray-900">
-                    A cluttered website with 19 pages, redundant content, and poor findability undermined trust with patrons, donors, and volunteers.
+                    Imagine trying to navigate a website where critical information is buried under layers of redundancy—where "Our Story" and "Our History" are separate pages, yet neither fully answers your questions.
                 </p>
                 <p>
-                    Family Promise Salt Lake’s outdated sitemap made it difficult for users to find critical information, risking engagement and support for their mission.
+                    For Family Promise of Salt Lake, a nonprofit dedicated to supporting families experiencing homelessness, this was the reality. Their outdated, cluttered website risked undermining trust with the very people who needed them most: families in crisis, potential donors, and volunteers.
                 </p>
-                <div class="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-lg my-8">
-                    <p class="font-bold text-red-900 mb-2">Core Issue</p>
-                    <p class="text-gray-700">
-                        No direct access to users—required creative research methods to uncover how people intuitively organized the site’s content.
-                    </p>
+                <p>
+                    As the sole UX researcher and designer for my senior capstone project, I led a 5-week initiative to redesign the organization's information architecture. With no direct access to end users, I turned to card sorting and custom data visualization to uncover how people intuitively organized the site's content.
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg my-8">
+                    <p class="font-bold text-blue-900 mb-2">The Result</p>
+                    <p class="text-gray-700">A streamlined sitemap that reduced 19 pages to 6 main sections, eliminated redundancy, and positioned Family Promise as the professional, trustworthy organization it truly is.</p>
                 </div>
             </div>
         </div>
@@ -1134,239 +1138,625 @@ project3: {
             <div class="bg-gray-900 text-white rounded-2xl p-8">
                 <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-6">Project Details</h3>
                 <div class="space-y-6">
-                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Role</p><p class="text-xl font-bold">UX Researcher & Designer</p></div>
-                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Duration</p><p class="text-xl font-bold">2 Months</p></div>
-                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Team</p><p class="text-xl font-bold">1 Designer, 1 Developer</p></div>
-                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Tools</p><p class="text-xl font-bold">FigJam, ChatGPT, Excel</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Role</p><p class="text-xl font-bold">UX Researcher, Designer & PM</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Timeline</p><p class="text-xl font-bold">July–August 2024 (5 weeks)</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Team</p><p class="text-xl font-bold">Solo UX + Developer Partner</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Context</p><p class="text-xl font-bold">Senior Capstone Project</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Client</p><p class="text-xl font-bold">Family Promise of Salt Lake</p></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Understanding the Challenge -->
+    <!-- The Problem -->
     <div class="mb-32 scroll-reveal">
-        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Understanding<br/>the Challenge</h2>
-        <div class="grid md:grid-cols-2 gap-6 mb-16">
-            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="text-5xl font-black number-badge mb-4">01</div>
-                <h3 class="text-2xl font-bold mb-3">No User Access</h3>
-                <p class="text-gray-600 text-lg">
-                    Limited to stakeholder feedback and remote card sorting with 10 participants.
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">The<br/>Problem</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-6">The Challenge</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Family Promise of Salt Lake's website suffered from years of accumulated content without strategic oversight. The sitemap had ballooned to 19 pages filled with overlapping, outdated, and poorly organized information.
                 </p>
             </div>
-            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="text-5xl font-black number-badge mb-4">02</div>
-                <h3 class="text-2xl font-bold mb-3">Cluttered Sitemap</h3>
-                <p class="text-gray-600 text-lg">
-                    19 pages with overlapping content (e.g., “Our Story” and “Our History”).
-                </p>
+            <div class="bg-red-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold text-red-900 mb-4">Key Issues</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-red-600 mr-2 font-bold">•</span>
+                        <span><strong>Redundancy:</strong> Multiple pages covered similar content ("Our Story," "Our History," "About Us")</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-red-600 mr-2 font-bold">•</span>
+                        <span><strong>Poor Hierarchy:</strong> Critical actions buried in submenus</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-red-600 mr-2 font-bold">•</span>
+                        <span><strong>Unclear Structure:</strong> Users couldn't predict where to find information</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-red-600 mr-2 font-bold">•</span>
+                        <span><strong>Trust Erosion:</strong> Cluttered navigation signaled disorganization</span>
+                    </li>
+                </ul>
             </div>
-            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="text-5xl font-black number-badge mb-4">03</div>
-                <h3 class="text-2xl font-bold mb-3">Trust at Risk</h3>
-                <p class="text-gray-600 text-lg">
-                    A disorganized site made the nonprofit appear unprofessional.
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-700 to-cyan-700 text-white rounded-2xl p-12 diagonal-section">
+            <div class="max-w-3xl">
+                <p class="text-sm uppercase tracking-wider mb-4 opacity-80">The Constraint</p>
+                <p class="text-3xl md:text-4xl font-bold leading-snug">
+                    Without direct access to the nonprofit's end users, I needed an objective, research-backed method to understand how people expected the site to be organized.
                 </p>
             </div>
         </div>
-        <div class="bg-gradient-to-br from-red-700 to-orange-800 text-white rounded-2xl p-12 diagonal-section">
-            <div class="max-w-3xl">
-                <p class="text-sm uppercase tracking-wider mb-4 opacity-80">Key Insight</p>
-                <p class="text-3xl md:text-4xl font-bold leading-snug">
-                    Information architecture directly impacts trust—especially for nonprofits relying on donor and volunteer support.
-                </p>
+    </div>
+
+    <!-- User Groups -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Who We're<br/>Designing For</h2>
+        
+        <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mb-12">
+            Before restructuring the site, I identified three distinct user groups with different needs and goals:
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="text-4xl mb-4">👨‍👩‍👧</div>
+                <h3 class="text-2xl font-bold mb-4">Families in Crisis</h3>
+                <div class="space-y-3 text-gray-700">
+                    <p><strong>Primary Need:</strong> Fast access to "Get Help" resources</p>
+                    <p><strong>Behavior:</strong> High-stress browsing, need immediate clarity</p>
+                    <p><strong>Pain Point:</strong> Can't afford to hunt through menus when facing homelessness</p>
+                </div>
             </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="text-4xl mb-4">💰</div>
+                <h3 class="text-2xl font-bold mb-4">Potential Donors</h3>
+                <div class="space-y-3 text-gray-700">
+                    <p><strong>Primary Need:</strong> Verify legitimacy and understand impact</p>
+                    <p><strong>Behavior:</strong> Looking for mission, financials, success stories</p>
+                    <p><strong>Pain Point:</strong> Disorganized sites signal mismanagement, reduce donation likelihood</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="text-4xl mb-4">🙋</div>
+                <h3 class="text-2xl font-bold mb-4">Volunteers</h3>
+                <div class="space-y-3 text-gray-700">
+                    <p><strong>Primary Need:</strong> Find opportunities and understand time commitments</p>
+                    <p><strong>Behavior:</strong> Comparing multiple organizations, need clear info</p>
+                    <p><strong>Pain Point:</strong> Vague or scattered volunteer info leads to drop-off</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-8 mt-12">
+            <h3 class="text-xl font-bold mb-4">Design Implication</h3>
+            <p class="text-lg text-gray-700">
+                The sitemap needed to serve high-stress urgent users AND leisurely research-oriented users—requiring both prominent critical actions and clear exploratory paths.
+            </p>
         </div>
     </div>
 
     <!-- Research Process -->
     <div class="mb-32 scroll-reveal">
-        <div class="grid md:grid-cols-3 gap-12 mb-12">
-            <div class="md:col-span-1">
-                <h2 class="text-5xl font-black mb-6 leading-tight">Research<br/>Process</h2>
-            </div>
-            <div class="md:col-span-2">
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
-                    Used **card sorting** and **custom data visualization** to objectively evaluate the sitemap.
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Research<br/>Process</h2>
+
+        <div class="mb-12">
+            <h3 class="text-3xl font-bold mb-6">Why Card Sorting?</h3>
+            <p class="text-xl text-gray-700 leading-relaxed max-w-3xl">
+                Card sorting reveals users' mental models—how they naturally group and categorize information. Without access to Family Promise's actual users, this method let me gather objective data about information organization from representative participants.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="text-3xl font-black number-badge mb-4">01</div>
+                <h3 class="text-2xl font-bold mb-4">Content Extraction</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    I audited the existing sitemap and extracted every topic, page name, and major content section. This became exactly <strong>20 individual "cards"</strong> in FigJam—each representing a discrete piece of information users might need.
                 </p>
-                <div class="image-float">
-                    <img src="https://placehold.co/1200x600?text=FigJam+Card+Sorting" alt="FigJam card sorting session" class="w-full rounded-xl shadow-lg" />
-                    <p class="text-gray-500 mt-4 text-sm">Remote card sorting with FigJam</p>
-                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="text-3xl font-black number-badge mb-4">02</div>
+                <h3 class="text-2xl font-bold mb-4">Participant Recruitment</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Recruited <strong>10 participants</strong> through personal networks and my developer partner Matthew. Mixed demographics to represent diverse user perspectives, with no prior relationship to Family Promise (unbiased mental models).
+                </p>
+                <p class="text-sm text-gray-600 italic">
+                    Participants created between 4 and 7 groups each, revealing diverse mental models while showing underlying patterns.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="text-3xl font-black number-badge mb-4">03</div>
+                <h3 class="text-2xl font-bold mb-4">Session Design</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    I wrote a facilitation script to ensure consistency across sessions. Participants grouped cards in ways that made sense to them while using "think aloud" protocol to capture their reasoning.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="text-3xl font-black number-badge mb-4">04</div>
+                <h3 class="text-2xl font-bold mb-4">Cross-Disciplinary Collaboration</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    I trained developer Matthew to facilitate sessions alongside me, doubling our capacity and exposing him to UX research methods. This reinforced the value of cross-functional partnership.
+                </p>
             </div>
         </div>
-        <div class="space-y-8">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="md:col-span-2 image-float">
-                    <img src="https://placehold.co/800x500?text=Dendrogram+Visualization" alt="Dendrogram visualization" class="w-full rounded-xl shadow-lg" />
-                    <p class="text-gray-500 mt-4 text-sm">Dendrogram: Natural content clusters</p>
-                </div>
-                <div class="bg-red-50 rounded-xl p-8 flex items-center">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Key Steps</h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li>• Extracted 20+ topics from the existing sitemap.</li>
-                            <li>• Conducted remote card sorts with 10 participants.</li>
-                            <li>• Generated a dendrogram and heat map using custom ChatGPT scripts.</li>
-                        </ul>
-                    </div>
-                </div>
+
+        <div class="image-float">
+            <img src="https://placehold.co/1200x700?text=Card+Sorting+Session+Screenshot" alt="Card sorting session in FigJam" class="w-full rounded-xl shadow-lg" />
+            <p class="text-center text-gray-500 mt-4 text-sm">Remote card sorting sessions conducted via FigJam</p>
+        </div>
+    </div>
+
+    <!-- Data Analysis -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Data Analysis</h2>
+
+        <div class="bg-white rounded-2xl p-12 md:p-16 shadow-xl mb-12">
+            <span class="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-6">The Challenge</span>
+            <h3 class="text-3xl font-bold mb-6">From Overwhelm to Insight</h3>
+            <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                After 10 sessions, I had 10 completely different card groupings. Some participants created 4 categories. Others created 7. Card labels varied wildly ("Help" vs. "Get Support" vs. "Services").
+            </p>
+            <p class="text-2xl font-bold text-gray-900">
+                The question: How do you identify patterns in this chaos?
+            </p>
+        </div>
+
+        <h3 class="text-3xl font-bold mb-8">The Solution: Data Visualization</h3>
+
+        <div class="space-y-8 mb-16">
+            <div class="bg-blue-50 rounded-xl p-8">
+                <h4 class="text-xl font-bold mb-4">1. Data Compilation</h4>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    I compiled the card sort data into a structured spreadsheet, tracking which cards each participant grouped together across all 10 sessions. This raw data became the foundation for generating visualizations that would reveal patterns.
+                </p>
             </div>
+
+            <div class="bg-blue-50 rounded-xl p-8">
+                <h4 class="text-xl font-bold mb-4">2. Custom Python Scripts</h4>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    I researched hierarchical clustering methods and wrote Python scripts (with ChatGPT assistance) that transformed my data into visual formats:
+                </p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 text-xl">📊</span>
+                        <div>
+                            <strong>Dendrogram (Tree Diagram):</strong> Shows hierarchical relationships between cards, reveals which content naturally "belongs together"
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 text-xl">🗺️</span>
+                        <div>
+                            <strong>Heat Map:</strong> Color-coded matrix showing co-occurrence frequency—darker colors indicate stronger relationships
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Interactive Visualizations - FIXED SPACING -->
+        <div class="mb-20">
+            <div class="bg-gradient-to-br from-blue-700 to-cyan-700 text-white rounded-2xl p-12 mb-16">
+                <h3 class="text-3xl font-bold mb-6">Interactive Visualizations</h3>
+                <p class="text-xl opacity-90 mb-4">
+                    The dendrogram and heat map below are fully interactive. Click to explore the data and see how participants grouped content.
+                </p>
+                <p class="text-lg opacity-80">
+                    Note: Opens in new tab for full-screen interactive experience
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Dendrogram Card -->
+                <a href="/dendrogram.html" target="_blank" class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+                    <div class="p-4">
+                        <img src="/dendrogram.png" alt="Interactive dendrogram visualization" class="w-full rounded-lg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">Interactive Dendrogram</h4>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            Explore the hierarchical clustering of card sort data
+                        </p>
+                        <span class="inline-flex items-center text-blue-600 font-bold text-lg group-hover:gap-3 transition-all">
+                            Open Interactive View
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- Heat Map Card -->
+                <a href="/heatmap.html" target="_blank" class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+                    <div class="p-4">
+                        <img src="/heatmap.png" alt="Interactive heat map visualization" class="w-full rounded-lg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">Interactive Heat Map</h4>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            See co-occurrence patterns across participants
+                        </p>
+                        <span class="inline-flex items-center text-blue-600 font-bold text-lg group-hover:gap-3 transition-all">
+                            Open Interactive View
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-green-50 rounded-xl p-8">
+            <h3 class="text-2xl font-bold mb-6">Pattern Identification</h3>
+            <p class="text-lg text-gray-700 mb-6">The visualizations revealed clear clusters:</p>
+            <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span><strong>"Who We Are"</strong> content (Our Story, Our Impact, Our History, Staff and Board) formed a tight cluster—validating that users saw these as variations of the same information need</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span><strong>"What We Do"</strong> (program information, homelessness context) grouped together</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span><strong>Resources and Help</strong> formed their own distinct area</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span><strong>Get Involved actions</strong> (Donate, Volunteer, Contact) clustered as a separate engagement category</span>
+                </li>
+            </ul>
         </div>
     </div>
 
     <!-- Design Solution -->
     <div class="mb-32 scroll-reveal">
-        <div class="bg-white rounded-2xl p-12 md:p-16 shadow-xl">
-            <span class="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">Solution</span>
-            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">From Clutter to Clarity</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                        Reduced the sitemap from **19 pages to 8**, consolidating overlapping content and prioritizing critical actions (e.g., “Get Help”).
-                    </p>
-                    <p class="text-xl text-gray-700 leading-relaxed">
-                        <strong>Adapted the dendrogram</strong> to balance **user expectations** and **business needs**:
-                    </p>
-                    <div class="mt-6">
-                        <table class="w-full border-collapse">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th class="p-3 text-left text-sm font-semibold text-gray-700">Before (Problem)</th>
-                                    <th class="p-3 text-left text-sm font-semibold text-gray-700">After (Solution)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-t">
-                                    <td class="p-3 text-gray-600">19 pages with overlapping content</td>
-                                    <td class="p-3 text-gray-600">8 pages, logically grouped</td>
-                                </tr>
-                                <tr class="border-t">
-                                    <td class="p-3 text-gray-600">“Our Story” and “Our History” as separate pages</td>
-                                    <td class="p-3 text-gray-600">Merged into a single “Who We Are” page</td>
-                                </tr>
-                                <tr class="border-t">
-                                    <td class="p-3 text-gray-600">Donor/volunteer info scattered</td>
-                                    <td class="p-3 text-gray-600">Consolidated under “Get Involved”</td>
-                                </tr>
-                                <tr class="border-t">
-                                    <td class="p-3 text-gray-600">Critical actions (e.g., “Get Help”) buried</td>
-                                    <td class="p-3 text-gray-600">Promoted to top-level navigation</td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Translating<br/>Insights into Design</h2>
+
+        <div class="bg-blue-50 rounded-xl p-8 mb-12">
+            <h3 class="text-2xl font-bold mb-4">The Dendrogram-to-Sitemap Process</h3>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                The dendrogram provided structure, but <strong>data doesn't dictate design</strong>—it informs it. I adapted the clusters based on:
+            </p>
+            <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                    <span class="text-blue-600 mr-3">•</span>
+                    <span><strong>User Priorities:</strong> Families in crisis need immediate access to help</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-600 mr-3">•</span>
+                    <span><strong>Business Goals:</strong> Nonprofit sustainability requires visible donation pathways</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-600 mr-3">•</span>
+                    <span><strong>Content Strategy:</strong> Merge redundant pages, eliminate outdated content</span>
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="text-3xl font-bold mb-8">The New Sitemap</h3>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-red-50 rounded-xl p-8">
+                <h4 class="text-xl font-bold text-red-900 mb-4">Before: 19 Pages</h4>
+                <ul class="text-sm text-gray-700 space-y-2">
+                    <li>• Home / Landing Page</li>
+                    <li>• Who We Are</li>
+                    <li>• Our Story</li>
+                    <li>• Our Impact</li>
+                    <li>• Staff and Board</li>
+                    <li>• What We Do</li>
+                    <li>• Get Involved</li>
+                    <li>• Donation Information</li>
+                    <li>• Current Volunteer Opportunities</li>
+                    <li>• Resources for Families</li>
+                    <li>• Additional Resources (duplicate!)</li>
+                    <li>• Homelessness in Utah</li>
+                    <li>• Homelessness in the US</li>
+                    <li>• Latest News</li>
+                    <li>• Tour Our Facility</li>
+                    <li>• Contact Us</li>
+                    <li>• Employment Opportunities</li>
+                    <li>• Need Help?</li>
+                    <li>• Get Help (separate from "Need Help?"!)</li>
+                </ul>
+            </div>
+
+            <div class="bg-green-50 rounded-xl p-8">
+                <h4 class="text-xl font-bold text-green-900 mb-4">After: 6 Main Sections + Home</h4>
+                <ul class="text-sm text-gray-700 space-y-2">
+                    <li><strong>1. Homepage</strong> - Mission, stats, newsletter</li>
+                    <li><strong>2. Who We Are</strong> - Our Story, Staff & Board</li>
+                    <li><strong>3. What We Do</strong> - Our Impact, How Program Works</li>
+                    <li><strong>4. Resources for Families</strong> - Educational content</li>
+                    <li><strong>5. Get Help</strong> - What to expect, Form</li>
+                    <li><strong>6. Get Involved</strong>
+                        <ul class="ml-6 mt-2 space-y-1">
+                            <li>→ Donate (Amazon, Money, Impact, Thanks)</li>
+                            <li>→ Volunteer (Info, Opportunities)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-700 to-teal-800 text-white rounded-2xl p-12">
+            <h3 class="text-2xl font-bold mb-6">Key Structural Changes</h3>
+            <ul class="space-y-4 text-lg opacity-90">
+                <li class="flex items-start">
+                    <span class="mr-3">✓</span>
+                    <span><strong>Eliminated redundancy:</strong> "Resources for Families" and "Additional Resources" were duplicate pages—consolidated into one</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3">✓</span>
+                    <span><strong>Removed standalone pages:</strong> "Our History," "Homelessness in Utah," "Homelessness in the US," "Latest Newsletter," "Tour Our Facility," "Employment Opportunities" were either merged or removed</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3">✓</span>
+                    <span><strong>Elevated critical actions:</strong> "Get Help" promoted to top-level on mobile (already was on desktop)</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3">✓</span>
+                    <span><strong>Clarified hierarchy:</strong> "Donate" and "Volunteer" became clear sub-categories of "Get Involved"</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Design Rationale -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Key Design<br/>Decisions</h2>
+
+        <div class="space-y-8">
+            <div class="bg-white rounded-xl p-10 shadow-lg">
+                <div class="flex items-start gap-6">
+                    <div class="text-5xl font-black number-badge flex-shrink-0">01</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">"Get Help" Placement</h3>
+                        <div class="space-y-3 text-gray-700">
+                            <p><strong>The Data:</strong> Card sorting showed "Get Help" as a distinct category, but placement varied</p>
+                            <p><strong>My Decision:</strong> Ensured it was top-level on both desktop AND mobile (it was already top-level on desktop, but I elevated it on mobile navigation)</p>
+                            <p><strong>Reasoning:</strong> Families in crisis can't hunt through hamburger menus on mobile devices. This action needed to be immediately visible regardless of screen size.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="image-float">
-                    <img src="https://placehold.co/400x700?text=Simplified+Sitemap" alt="Simplified sitemap" class="w-full rounded-xl shadow-lg mx-auto max-w-sm" />
-                    <p class="text-center text-gray-500 mt-4 text-sm">After: Streamlined to 8 pages</p>
+            </div>
+
+            <div class="bg-white rounded-xl p-10 shadow-lg">
+                <div class="flex items-start gap-6">
+                    <div class="text-5xl font-black number-badge flex-shrink-0">02</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">"Donate" Visibility</h3>
+                        <div class="space-y-3 text-gray-700">
+                            <p><strong>The Data:</strong> Some participants grouped "Donate" deep in "Get Involved"</p>
+                            <p><strong>My Decision:</strong> Kept it prominent in main navigation</p>
+                            <p><strong>Reasoning:</strong> Nonprofit sustainability depends on visible donation pathways. Data informs, but business viability matters.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-10 shadow-lg">
+                <div class="flex items-start gap-6">
+                    <div class="text-5xl font-black number-badge flex-shrink-0">03</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Content Consolidation</h3>
+                        <div class="space-y-3 text-gray-700">
+                            <p><strong>The Data:</strong> "Our Story," "Our History," "About Us" grouped together by 90% of participants</p>
+                            <p><strong>My Decision:</strong> Merged into single "Who We Are" section with subsections</p>
+                            <p><strong>Reasoning:</strong> Users saw these as variations of the same need—validating the consolidation.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Impact -->
+    <!-- Handoff -->
     <div class="mb-32 scroll-reveal">
-        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Impact</h2>
-        <div class="grid md:grid-cols-2 gap-12 mb-12">
-            <div class="bg-red-50 rounded-2xl p-10">
-                <p class="text-sm uppercase tracking-wider text-red-700 mb-4">Before Redesign</p>
-                <div class="space-y-4">
-                    <div class="flex items-baseline">
-                        <span class="text-5xl font-black text-red-600">19</span>
-                        <span class="ml-4 text-gray-700">pages with redundant content</span>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-green-50 rounded-2xl p-10">
-                <p class="text-sm uppercase tracking-wider text-green-700 mb-4">After Redesign</p>
-                <div class="space-y-4">
-                    <div class="flex items-baseline">
-                        <span class="text-5xl font-black text-green-600">8</span>
-                        <span class="ml-4 text-gray-700">pages, improved findability</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-6">
-            <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-green-600">
-                <p class="text-xl text-gray-700 italic mb-4">
-                    “The new structure feels intuitive and professional—exactly what we needed to build trust with our community.”
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Handoff to<br/>Development</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                    I delivered the redesigned sitemap and Figma prototypes of key pages to developer Matthew for implementation. Family Promise leadership approved the new structure, and the site is currently in development.
                 </p>
-                <p class="text-sm text-gray-500">— Stakeholder Feedback</p>
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+                    <p class="text-gray-700">
+                        <strong>Current Status:</strong> Sitemap approved and in development phase
+                    </p>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold mb-4">Key Artifacts</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        <span>Card sorting facilitation script</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        <span>Compiled card sort data (10 participant sessions)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        <span>Interactive dendrogram visualization (HTML)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        <span>Interactive heat map visualization (HTML)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        <span>Redesigned sitemap</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        <span>Figma prototypes (Homepage, Get Help, Donate, Who We Are)</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <!-- Key Takeaways -->
+    <!-- Impact & Outcomes -->
     <div class="mb-32 scroll-reveal">
-        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Key<br/>Takeaways</h2>
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Impact &<br/>Outcomes</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+                <div class="text-5xl font-black text-green-600 mb-2">68%</div>
+                <p class="text-gray-700">Reduction in page count (19 → 6 sections)</p>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+                <div class="text-5xl font-black text-blue-600 mb-2">10</div>
+                <p class="text-gray-700">Participant sessions revealing mental models</p>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+                <div class="text-5xl font-black text-purple-600 mb-2">20</div>
+                <p class="text-gray-700">Cards sorted across all sessions</p>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <div class="bg-green-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold text-green-900 mb-4">Structural Simplification</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• Reduced sitemap from 19 pages to 6 main sections (plus homepage)</li>
+                    <li>• Eliminated redundant pages: Merged duplicate "Resources" pages, removed standalone "Our History," consolidated homelessness educational content</li>
+                    <li>• Removed unnecessary standalone pages: "Tour Our Facility," "Employment Opportunities," "Latest Newsletter" either merged into parent sections or eliminated</li>
+                    <li>• Clarified structure: Created clear parent-child relationships instead of flat navigation</li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold text-blue-900 mb-4">User-Centered Prioritization</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• Elevated "Get Help" to top-level on mobile (responding to high-stress user needs)</li>
+                    <li>• Created structure aligned with user mental models from 10 card sorting sessions</li>
+                    <li>• Improved predictability—users can now anticipate where information lives</li>
+                </ul>
+            </div>
+
+            <div class="bg-purple-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold text-purple-900 mb-4">Research Validation</h3>
+                <p class="text-gray-700">
+                    The card sorting data provided objective validation for difficult decisions. When stakeholders questioned merging "Our Story" and "Our History," I could point to 90% participant agreement. The dendrogram and heat map made abstract IA decisions tangible and discussable.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lessons Learned - 4 CARDS WITH LEARNING CALLOUTS -->
+    <div class="mb-32 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-black mb-16 leading-tight">Lessons<br/>Learned</h2>
+        
         <div class="space-y-8">
             <div class="bg-gradient-to-br from-green-700 to-green-900 text-white rounded-2xl p-10">
                 <div class="text-4xl font-black mb-6">01</div>
                 <h3 class="text-3xl font-bold mb-4">Creativity Under Constraints</h3>
                 <p class="text-xl opacity-90 mb-6 leading-relaxed">
-                    Used card sorting and custom scripts to overcome limited user access, turning constraints into opportunities for innovation.
+                    Without direct access to Family Promise's users, I used card sorting and custom data visualization to uncover mental models. Sometimes constraints force better solutions than unlimited access would—I had to be more creative and rigorous with my methods.
                 </p>
                 <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                     <p class="italic">
-                        <strong>Learning:</strong> Limitations can spark creative solutions—like using ChatGPT to generate data visualizations.
+                        <strong>Learning:</strong> Resourcefulness can overcome research limitations. The tighter the constraints, the more innovative your methods need to be.
                     </p>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-teal-700 to-cyan-700 text-white rounded-2xl p-10">
+
+            <div class="bg-gradient-to-br from-blue-700 to-cyan-700 text-white rounded-2xl p-10">
                 <div class="text-4xl font-black mb-6">02</div>
-                <h3 class="text-3xl font-bold mb-4">Data as a Guide, Not a Rule</h3>
+                <h3 class="text-3xl font-bold mb-4">Working Through Uncertainty</h3>
                 <p class="text-xl opacity-90 mb-6 leading-relaxed">
-                    The dendrogram provided direction, but adapting insights to real-world needs (e.g., pulling “Get Help” out of clusters) was critical.
+                    When organizational transitions limited stakeholder availability, I leaned on card sorting data and nonprofit best practices to make autonomous design decisions. The new leadership's approval validated my approach.
                 </p>
                 <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                     <p class="italic">
-                        <strong>Learning:</strong> Balance data with human judgment for user-centered design.
+                        <strong>Learning:</strong> Strong research creates confidence even when business context shifts. Build work that can stand on its own.
                     </p>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-blue-700 to-sky-700 text-white rounded-2xl p-10">
+
+            <div class="bg-gradient-to-br from-purple-700 to-indigo-700 text-white rounded-2xl p-10">
                 <div class="text-4xl font-black mb-6">03</div>
-                <h3 class="text-3xl font-bold mb-4">Collaboration Matters</h3>
+                <h3 class="text-3xl font-bold mb-4">Cross-Disciplinary Collaboration</h3>
                 <p class="text-xl opacity-90 mb-6 leading-relaxed">
-                    Partnering with a developer to conduct card sorts reinforced the value of cross-disciplinary teamwork.
+                    Training developer Matthew to facilitate card sorting sessions expanded our research capacity and gave him firsthand exposure to UX methods. He understood the "why" behind decisions, not just the "what."
                 </p>
                 <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                     <p class="italic">
-                        <strong>Learning:</strong> Involve diverse perspectives early to strengthen research and design.
+                        <strong>Learning:</strong> Involving developers in research creates better implementation. When team members understand user needs directly, they make smarter trade-offs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-orange-700 to-red-700 text-white rounded-2xl p-10">
+                <div class="text-4xl font-black mb-6">04</div>
+                <h3 class="text-3xl font-bold mb-4">Data Informs, Doesn't Dictate</h3>
+                <p class="text-xl opacity-90 mb-6 leading-relaxed">
+                    The dendrogram suggested certain groupings, but I adapted them to prioritize real-world needs—like pulling "Get Help" to top-level navigation despite clustering data, because families in crisis can't hunt through menus.
+                </p>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <p class="italic">
+                        <strong>Learning:</strong> Research provides confidence to make human-centered decisions, not algorithmic ones. Use data to inform your judgment, not replace it.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- What's Next -->
+    <!-- Reflection -->
     <div class="mb-24 scroll-reveal">
         <div class="bg-gray-900 text-white rounded-2xl p-12 md:p-16">
-            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">What I'd Do<br/>Differently</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Reflection &<br/>Next Steps</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
                 <div>
-                    <h4 class="text-xl font-bold mb-3 text-green-400">User Testing</h4>
-                    <p class="text-gray-300">Test the new sitemap with real users to validate findability.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">What Worked Well</h3>
+                    <ul class="space-y-3 text-lg opacity-90">
+                        <li>• Card sorting provided objective foundation for subjective decisions</li>
+                        <li>• Custom visualizations made complex data accessible</li>
+                        <li>• Remote research methods proved effective and scalable</li>
+                        <li>• Autonomous decision-making (when necessary) built confidence</li>
+                    </ul>
                 </div>
                 <div>
-                    <h4 class="text-xl font-bold mb-3 text-green-400">Ongoing Audits</h4>
-                    <p class="text-gray-300">Advocate for regular content reviews to prevent future clutter.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-orange-400">What I'd Do Differently</h3>
+                    <ul class="space-y-3 text-lg opacity-90">
+                        <li>• Test with actual users who've experienced homelessness</li>
+                        <li>• Explore specialized tools like Optimal Workshop</li>
+                        <li>• Conduct follow-up validation with the new structure</li>
+                        <li>• Advocate for ongoing IA governance to prevent future sprawl</li>
+                    </ul>
                 </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-3 text-green-400">Explore Tools</h4>
-                    <p class="text-gray-300">Use Optimal Workshop for more streamlined card sorting analysis.</p>
-                </div>
+            </div>
+
+            <div class="border-t border-white/20 pt-8">
+                <p class="text-2xl font-bold mb-4">Final Thought</p>
+                <p class="text-xl opacity-90 leading-relaxed">
+                    This project reinforced that UX isn't just about pixels—it's about organizing information in ways that build trust. For a nonprofit like Family Promise, where families in crisis are making high-stakes decisions about seeking help, that trust is everything.
+                </p>
             </div>
         </div>
     </div>
+
 </div>
 `
-    },
-			contact: {
-				title: "Contact",
-				content: '<h1 class="text-4xl font-bold">Contact</h1>...'}
-		}}
-	/>
+},
+            contact: {
+                title: "Contact",
+                content: '<h1 class="text-4xl font-bold">Contact</h1>...',
+            },
+        }}
+    />
 </Layout>
