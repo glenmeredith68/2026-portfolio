@@ -77,7 +77,10 @@ const utilityKeys = pageKeys.filter(key => !pages[key].isProject);
   const utilityItems = document.querySelectorAll(".utility-item");
   const allMenuItems = [...projectItems, ...utilityItems];
   const contentDiv = document.getElementById("content");
-  let selectedPage = Object.keys(pages)[0];
+  
+  // Select first PROJECT by default (not first page)
+  const firstProjectKey = Object.keys(pages).find(key => pages[key].isProject);
+  let selectedPage = firstProjectKey || Object.keys(pages)[0];
 
   // Scroll reveal observer
   let scrollObserver;
