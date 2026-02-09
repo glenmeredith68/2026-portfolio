@@ -7,9 +7,196 @@ import IpodPortfolio from "../components/ipod-interface.astro";
 <Layout title="Glen's Portfolio | Home">
     <IpodPortfolio
         pages={{
-            home: {
-                title: "Home",
-                content: '<h1 class="text-4xl font-bold">Welcome</h1>...',
+            about: {
+                title: "About",
+                content: `
+<div class="max-w-4xl mx-auto py-16 px-6">
+    
+    <!-- Main Title -->
+    <h1 class="text-6xl md:text-7xl font-black mb-16 leading-tight">About</h1>
+
+    <!-- The Honest Version -->
+    <div class="mb-16">
+        <h2 class="text-4xl font-bold mb-8">The Honest Version</h2>
+        
+        <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p>
+                Here's the thing: UX is the only subject that's ever been able to keep my attention. And specifically, it's the research-driven side of UX that hooked me.
+            </p>
+            
+            <p>
+                I don't want to be someone who designs websites and apps purely off aesthetics, vibes, and "industry best practices." Don't get me wrong—best practices matter—but I've always been frustrated by designs that are just "what the designer thought was best." I believe design should be backed by research. Not "I'm the designer, I know best," but "here's what the data shows users actually need."
+            </p>
+            
+            <p>
+                That's why the Family Promise project is one of my favorites. I got to use card sorting to understand users' mental models, then design a sitemap based on actual patterns in the data. That process—research informing design—is where I thrive.
+            </p>
+            
+            <p>
+                Honestly? Aesthetics and picking the perfect colors, fonts, and shapes is probably my weak point. I've always struggled with making things look effortlessly beautiful. But what I'm good at is designing based on what works best in each situation—for the user, for the content, and for the medium.
+            </p>
+        </div>
+    </div>
+
+    <!-- Currently -->
+    <div class="mb-16 bg-green-50 rounded-xl p-8 border-l-4 border-green-600">
+        <h2 class="text-3xl font-bold mb-4">Currently</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+            Recently graduated from UVU (December 2025) and actively seeking <strong>product design or UX roles</strong> where I can leverage research to inform design decisions. Available immediately for remote, hybrid, or in-person opportunities.
+        </p>
+    </div>
+
+    <!-- Experience -->
+    <div class="mb-16">
+        <h2 class="text-4xl font-bold mb-12">Experience</h2>
+        
+        <!-- FM Global -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-2">XD Co-op, FM Global</h3>
+            <p class="text-gray-600 italic mb-6">January 2023 – December 2023 (Full-time Jan-Aug, Part-time Sept-Dec)</p>
+            
+            <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>
+                    At FM Global, I worked as an experience design co-op focusing on information architecture and organizational research. My primary project involved "blueprinting"—documenting how information flowed across the organization to help leadership understand the system and help designers know what information needed to be accessible where.
+                </p>
+                
+                <p>
+                    This meant conducting interviews throughout the organization, annotating transcripts to pull out relevant details, and synthesizing everything into a comprehensive diagram. I also worked with researchers and designers to create usability studies using UserTesting.
+                </p>
+                
+                <p>
+                    <strong>What I learned:</strong> The biggest takeaway from FM Global was that in UX, you have to work hard to define the problem before diving into solutions. The better you understand a problem, the better you can solve it. This taught me to slow down, do the research, and let the insights guide the design—not the other way around.
+                </p>
+            </div>
+        </div>
+
+        <!-- UVU -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-2">Graphic Designer, UVU College of Engineering & Technology</h3>
+            <p class="text-gray-600 italic mb-6">February 2024 – December 2025</p>
+            
+            <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>
+                    Started as a marketing intern for the Department of Electrical and Computer Engineering, then transitioned to designing for the entire college. My role involved bringing digital signage across departments up to university branding standards (departments had been creating wild, off-brand signage), and developing larger campaigns for the college.
+                </p>
+                
+                <p>
+                    <strong>Key project:</strong> Created the "Where Engineers Are Built" campaign—a college-wide signage initiative with variations like "Where Contractors Are Built" and "Where Innovators Are Built" tailored to specific departments. This involved a lot of stakeholder meetings, iterative feedback cycles, and refining designs until they aligned with both the vision and brand guidelines.
+                </p>
+                
+                <p>
+                    I also mentored students in a practicum class, serving as their design stakeholder. We met weekly to ideate, review work, and help them learn to design within brand constraints.
+                </p>
+                
+                <p>
+                    <strong>What I learned:</strong> This role taught me how to manage stakeholders with different mental models, iterate based on feedback, and execute designs that serve organizational goals—not just look good. It also reinforced that design is a conversation, not a dictation.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="mb-16">
+        <h2 class="text-4xl font-bold mb-8">Education</h2>
+        
+        <div class="space-y-6">
+            <div>
+                <h3 class="text-2xl font-bold mb-2">BS Web Design & Development, Emphasis in Interaction Design</h3>
+                <p class="text-gray-600 mb-2">Utah Valley University (UVU) – <em>Graduated December 2025</em></p>
+                <p class="text-gray-700">Relevant coursework: UX Research, Interaction Design, Interactive Media Design, Adaptive Media, Capstone</p>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold mb-2">Associate Degree (General Studies)</h3>
+                <p class="text-gray-600">Brigham Young University-Idaho (BYU-I) – <em>2022</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills & Approach -->
+    <div class="mb-16">
+        <h2 class="text-4xl font-bold mb-8">Skills & Approach</h2>
+        
+        <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p>
+                I work primarily in <strong>Figma</strong> for wireframing, prototyping, and interface design. For research and collaboration, I use <strong>FigJam</strong> for card sorting, affinity mapping, and workshop facilitation.
+            </p>
+            
+            <p>
+                My process always starts with <strong>understanding the problem</strong>—whether that's through user interviews, card sorting, usability testing, or stakeholder research. I'm not interested in designing something that just looks good; I want to design something that actually solves the problem.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 my-8">
+                <div class="bg-green-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4 text-green-900">I'm strongest in:</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• <strong>Research & synthesis</strong> (card sorting, interviews, data visualization)</li>
+                        <li>• <strong>Information architecture</strong> (organizing complex systems)</li>
+                        <li>• <strong>Iterative design</strong> (feedback loops, testing, refinement)</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-blue-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">I'm working on:</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• <strong>Visual design</strong> (getting better at aesthetics and polish)</li>
+                        <li>• <strong>Prototyping fidelity</strong> (moving beyond wireframes faster)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What I'm Looking For -->
+    <div class="mb-16">
+        <h2 class="text-4xl font-bold mb-8">What I'm Looking For</h2>
+        
+        <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p>
+                I'm seeking <strong>product design, UX design, or UX research roles</strong> where I can:
+            </p>
+            
+            <ul class="space-y-3 ml-6">
+                <li>• Conduct research that informs design decisions</li>
+                <li>• Work on problems that require understanding complex systems</li>
+                <li>• Collaborate with cross-functional teams (developers, PMs, stakeholders)</li>
+                <li>• Design solutions that are backed by data, not assumptions</li>
+            </ul>
+            
+            <div class="bg-gray-100 rounded-xl p-6 mt-8">
+                <p class="mb-2"><strong>Location:</strong> Based in Utah, open to remote, hybrid, or relocation</p>
+                <p><strong>Availability:</strong> Immediate</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="mb-16">
+        <h2 class="text-4xl font-bold mb-8">Let's Talk</h2>
+        
+        <div class="space-y-4 text-lg">
+            <p>
+                <strong>Email:</strong> <a href="mailto:glen.lee.meredith@gmail.com" class="text-green-600 hover:text-green-700 underline">glen.lee.meredith@gmail.com</a>
+            </p>
+            <p>
+                <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/glen-meredith" target="_blank" class="text-green-600 hover:text-green-700 underline">linkedin.com/in/glen-meredith</a>
+            </p>
+            <p>
+                <a href="/path-to-resume.pdf" download class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition mt-4">
+                    Download my full resume →
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- P.S. -->
+    <div class="border-t border-gray-200 pt-8">
+        <p class="text-gray-600 italic text-lg">
+            P.S. If you want to know more about my process, check out my case studies. They show way more than a resume ever could.
+        </p>
+    </div>
+
+</div>`,
             },
             resume: {
                 title: "Resume",
@@ -1090,11 +1277,11 @@ import IpodPortfolio from "../components/ipod-interface.astro";
 </div>
 `,
             },
-project3: {
-    title: "Family Promise",
-    meta: "UX • 5 Weeks",
-    isProject: true,
-    content: `
+            project3: {
+                title: "Family Promise",
+                meta: "UX • 5 Weeks",
+                isProject: true,
+                content: `
 <!-- Hero Section -->
 <section class="hero-gradient text-white py-24 px-6">
     <div class="max-w-5xl mx-auto">
@@ -1145,7 +1332,7 @@ project3: {
                 <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-6">Project Details</h3>
                 <div class="space-y-6">
                     <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Role</p><p class="text-xl font-bold">UX Researcher, Designer & PM</p></div>
-                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Timeline</p><p class="text-xl font-bold">July–August 2024 (5 weeks)</p></div>
+                    <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Timeline</p><p class="text-xl font-bold">July–August 2025 (5 weeks)</p></div>
                     <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Team</p><p class="text-xl font-bold">Solo UX + Developer Partner</p></div>
                     <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Context</p><p class="text-xl font-bold">Senior Capstone Project</p></div>
                     <div><p class="text-xs uppercase tracking-wider text-gray-400 mb-1">Client</p><p class="text-xl font-bold">Family Promise of Salt Lake</p></div>
@@ -1757,11 +1944,78 @@ project3: {
     </div>
 
 </div>
-`
-},
+`,
+            },
             contact: {
                 title: "Contact",
-                content: '<h1 class="text-4xl font-bold">Contact</h1>...',
+                content: `
+<div class="max-w-4xl mx-auto py-16 px-6">
+    
+    <!-- Title -->
+    <h1 class="text-6xl md:text-7xl font-black mb-8 leading-tight">Contact</h1>
+    
+    <!-- Intro -->
+    <div class="mb-16">
+        <p class="text-2xl text-gray-700 leading-relaxed mb-6">
+            I'm actively seeking UX and product design opportunities. Whether you have a role, a project, or just want to chat about design—I'd love to hear from you.
+        </p>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="mb-16">
+        <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
+        
+        <div class="space-y-6 text-lg">
+            <!-- Email -->
+            <div>
+                <p class="text-gray-600 mb-2">Email</p>
+                <a 
+                    href="mailto:glen.lee.meredith@gmail.com" 
+                    class="text-2xl font-bold text-green-600 hover:text-green-700 underline"
+                >
+                    glen.lee.meredith@gmail.com
+                </a>
+            </div>
+            
+            <!-- LinkedIn -->
+            <div>
+                <p class="text-gray-600 mb-2">LinkedIn</p>
+                <a 
+                    href="https://linkedin.com/in/glen-meredith" 
+                    target="_blank"
+                    class="text-2xl font-bold text-green-600 hover:text-green-700 underline"
+                >
+                    linkedin.com/in/glen-meredith
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Resume Download -->
+    <div class="mb-16">
+        <h2 class="text-4xl font-bold mb-8">Resume</h2>
+        <p class="text-lg text-gray-700 mb-6">
+            Want the full picture? Download my resume for a complete overview of my experience, education, and skills.
+        </p>
+        <a 
+            href="/path-to-resume.pdf" 
+            download 
+            class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition"
+        >
+            Download my resume →
+        </a>
+    </div>
+    
+    <!-- Availability -->
+    <div class="border-t border-gray-200 pt-12">
+        <h2 class="text-4xl font-bold mb-6">Availability</h2>
+        <div class="space-y-3 text-lg text-gray-700">
+            <p><strong>Location:</strong> Based in Utah, open to remote, hybrid, in-person or relocation</p>
+            <p><strong>Start Date:</strong> Available immediately</p>
+        </div>
+    </div>
+    
+</div>`,
             },
         }}
     />
