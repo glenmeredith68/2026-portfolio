@@ -309,12 +309,14 @@ import IpodPortfolio from "../components/ipod-interface.astro";
         </div>
         <div class="md:col-span-2 space-y-6">
             <p class="text-xl text-gray-700 leading-relaxed">
-                We analyzed existing solutions across three categories: smart mirrors (Lululemon Studio Mirror), closet management apps (Indyx), and outfit styling services (Stitch Fix).
-            </p>
+    We analyzed existing solutions across four categories: smart mirrors 
+    (Lululemon Studio Mirror), closet management apps (Indyx), outfit 
+    styling services (Stitch Fix), and smart closets (LG Styler).
+</p>
             <p class="text-xl text-gray-700 leading-relaxed">
                 None of them combined wardrobe, weather, and calendar in a single glanceable interface. That gap became our design goal.
             </p>
-            <div class="grid grid-cols-3 gap-4 mt-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                 <div class="bg-gray-50 rounded-xl p-6 text-center">
                     <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">Smart Mirrors</p>
                     <p class="font-bold text-lg">Lululemon</p>
@@ -330,6 +332,11 @@ import IpodPortfolio from "../components/ipod-interface.astro";
                     <p class="font-bold text-lg">Stitch Fix</p>
                     <p class="text-gray-600 text-sm mt-2">Outfit help, but no real-time context</p>
                 </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">Smart Closets</p>
+    <p class="font-bold text-lg">LG Styler</p>
+    <p class="text-gray-600 text-sm mt-2">Cleans clothes remotely, no outfit planning</p>
+</div>
             </div>
         </div>
     </div>
@@ -343,23 +350,25 @@ import IpodPortfolio from "../components/ipod-interface.astro";
         </p>
         
         <div class="space-y-8">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="md:col-span-2 image-float">
-                    <img src="https://placehold.co/800x500?text=Early+Sketches" alt="Initial concept sketches" class="w-full rounded-xl shadow-lg" />
-                    <p class="text-gray-500 mt-4 text-sm">Early concept exploration</p>
-                </div>
-                <div class="bg-green-50 rounded-xl p-8 flex items-center">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Key Questions</h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li>• Mirror or mobile app?</li>
-                            <li>• Individual items vs. complete outfits?</li>
-                            <li>• Essential vs. nice-to-have features?</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="grid md:grid-cols-2 gap-8 items-end">
+        <div class="image-float">
+            <img src="/mm-sketch-1.png" alt="Whiteboard sketches exploring phone vs mirror" class="w-full rounded-xl shadow-lg" />
+            <p class="text-gray-500 mt-4 text-sm">Phone vs. mirror — early concept exploration</p>
         </div>
+        <div class="image-float">
+            <img src="/mm-sketch-2.png" alt="Table sketches exploring screen structure and navigation" class="w-full rounded-xl shadow-lg" />
+            <p class="text-gray-500 mt-4 text-sm">Screen structure and navigation ideation</p>
+        </div>
+    </div>
+    <div class="bg-green-50 rounded-xl p-8">
+        <h3 class="text-xl font-bold mb-4">Key Questions</h3>
+        <ul class="space-y-3 text-gray-700 md:grid md:grid-cols-3 md:gap-4 md:space-y-0">
+            <li>• Mirror or mobile app?</li>
+            <li>• Individual items vs. complete outfits?</li>
+            <li>• Essential vs. nice-to-have features?</li>
+        </ul>
+    </div>
+</div>
     </div>
 
     <!-- The Flatlay Challenge -->
@@ -377,7 +386,7 @@ import IpodPortfolio from "../components/ipod-interface.astro";
                     </p>
                 </div>
                 <div class="image-float">
-                    <img src="https://placehold.co/400x700?text=Original+Flatlay+Design" alt="Original flatlay attempt" class="w-full rounded-xl shadow-lg mx-auto max-w-sm" />
+                    <img src="/mm-flatlay.png" alt="Original flatlay attempt" class="w-full rounded-xl shadow-lg mx-auto max-w-sm" />
                     <p class="text-center text-gray-500 mt-4 text-sm">Original approach - flatlay layout</p>
                 </div>
             </div>
@@ -421,7 +430,7 @@ import IpodPortfolio from "../components/ipod-interface.astro";
             </div>
             <div class="space-y-6">
                 <div class="image-float">
-                    <img src="https://placehold.co/400x700?text=Mobile+Design" alt="Shelby's mobile design" class="w-full rounded-xl shadow-lg mx-auto max-w-sm" />
+                    <img src="/mm-shelby.png" alt="Shelby's mobile design" class="w-full rounded-xl shadow-lg mx-auto max-w-sm" />
                     <p class="text-center text-gray-500 mt-4 text-sm">Shelby's card-based approach</p>
                 </div>
             </div>
@@ -480,7 +489,7 @@ import IpodPortfolio from "../components/ipod-interface.astro";
                         <span class="text-red-700 font-medium text-sm">Before</span>
                     </div>
                     <div class="image-float">
-                        <img src="https://placehold.co/500x800?text=Hidden+Button" alt="Before - hidden button" class="w-full rounded-xl shadow-lg" />
+                        <img src="/mm-hidden.png" alt="Before - hidden button" class="w-full rounded-xl shadow-lg" />
                     </div>
                     <p class="text-gray-600 mt-4">Button buried at end of scrollable row</p>
                 </div>
@@ -489,7 +498,7 @@ import IpodPortfolio from "../components/ipod-interface.astro";
                         <span class="text-green-700 font-medium text-sm">After</span>
                     </div>
                     <div class="image-float">
-                        <img src="https://placehold.co/500x800?text=Prominent+Button" alt="After - prominent button" class="w-full rounded-xl shadow-lg" />
+                        <img src="/mm-prominent.png" alt="After - prominent button" class="w-full rounded-xl shadow-lg" />
                     </div>
                     <p class="text-gray-600 mt-4">Prominent '+' button at the front (inspired by Facebook Stories)</p>
                 </div>
@@ -518,15 +527,15 @@ import IpodPortfolio from "../components/ipod-interface.astro";
 
             <div class="grid md:grid-cols-3 gap-6 mb-8">
                 <div class="image-float">
-                    <img src="https://placehold.co/350x600?text=Original+Weather" alt="Original weather" class="w-full rounded-xl shadow-lg" />
+                    <img src="/mm-weather-bad.png" alt="Original weather" class="w-full rounded-xl shadow-lg" />
                     <p class="text-center text-gray-600 mt-4 text-sm">Original: Confusing two-column layout</p>
                 </div>
                 <div class="image-float">
-                    <img src="https://placehold.co/350x600?text=ChatGPT+Suggestions" alt="ChatGPT suggestions" class="w-full rounded-xl shadow-lg" />
+                    <img src="/mm-chat.png" alt="ChatGPT suggestions" class="w-full rounded-xl shadow-lg" />
                     <p class="text-center text-gray-600 mt-4 text-sm">ChatGPT's suggestion mock-up</p>
                 </div>
                 <div class="image-float">
-                    <img src="https://placehold.co/350x600?text=Final+Weather" alt="Final weather" class="w-full rounded-xl shadow-lg" />
+                    <img src="/mm-weather-good.png" alt="Final weather" class="w-full rounded-xl shadow-lg" />
                     <p class="text-center text-gray-600 mt-4 text-sm">Final: Clear hierarchy and scrolling</p>
                 </div>
             </div>
