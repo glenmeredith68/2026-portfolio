@@ -208,7 +208,7 @@ import IpodPortfolio from "../components/ipod-interface.astro";
     <div class="max-w-5xl mx-auto">
         <div class="mb-6">
             <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-                UX Design · 2 Weeks · Team of 3
+                UX Design · 13 Weeks · Team of 3
             </span>
         </div>
         <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">Magic Mirror</h1>
@@ -223,8 +223,15 @@ import IpodPortfolio from "../components/ipod-interface.astro";
     <!-- Hero Image -->
     <div class="scroll-reveal mb-24 -mt-16 relative z-10">
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <img src="https://placehold.co/1400x800?text=Final+Mirror+Interface" alt="Final Magic Mirror interface" class="w-full" />
+            <img src="/mm-hero.png" alt="Final Magic Mirror interface" class="w-full" />
         </div>
+        <p class="text-xs text-gray-400 text-right mt-2">
+    Photo by <a href="https://unsplash.com/@jpvalery" 
+    target="_blank" class="underline hover:text-gray-300">
+    JP Valery</a> on 
+    <a href="https://unsplash.com" target="_blank" 
+    class="underline hover:text-gray-300">Unsplash</a>
+</p>
         <p class="text-center text-gray-500 mt-6 text-sm uppercase tracking-wider">Final Design · Mirror Home Screen</p>
     </div>
 
@@ -294,21 +301,39 @@ import IpodPortfolio from "../components/ipod-interface.astro";
     </div>
 
     <!-- Competitive Analysis -->
-    <div class="mb-32 scroll-reveal">
-        <div class="grid md:grid-cols-3 gap-12 mb-12">
-            <div class="md:col-span-1">
-                <h2 class="text-5xl font-black mb-6 leading-tight">Competitive<br/>Analysis</h2>
-            </div>
-            <div class="md:col-span-2">
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
-                    We analyzed existing solutions to identify market gaps and design opportunities.
-                </p>
-                <div class="image-float">
-                    <img src="https://placehold.co/1200x600?text=Competitive+Analysis+Grid" alt="Competitive analysis" class="w-full rounded-xl shadow-lg" />
+    <!-- Competitive Analysis -->
+<div class="mb-32 scroll-reveal">
+    <div class="grid md:grid-cols-3 gap-12">
+        <div class="md:col-span-1">
+            <h2 class="text-5xl font-black mb-6 leading-tight">Competitive<br/>Analysis</h2>
+        </div>
+        <div class="md:col-span-2 space-y-6">
+            <p class="text-xl text-gray-700 leading-relaxed">
+                We analyzed existing solutions across three categories: smart mirrors (Lululemon Studio Mirror), closet management apps (Indyx), and outfit styling services (Stitch Fix).
+            </p>
+            <p class="text-xl text-gray-700 leading-relaxed">
+                None of them combined wardrobe, weather, and calendar in a single glanceable interface. That gap became our design goal.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mt-8">
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">Smart Mirrors</p>
+                    <p class="font-bold text-lg">Lululemon</p>
+                    <p class="text-gray-600 text-sm mt-2">Fitness focus, no wardrobe integration</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">Closet Apps</p>
+                    <p class="font-bold text-lg">Indyx</p>
+                    <p class="text-gray-600 text-sm mt-2">Wardrobe only, no weather or calendar</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">Styling Services</p>
+                    <p class="font-bold text-lg">Stitch Fix</p>
+                    <p class="text-gray-600 text-sm mt-2">Outfit help, but no real-time context</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Initial Exploration -->
     <div class="mb-32 scroll-reveal">
@@ -518,7 +543,7 @@ import IpodPortfolio from "../components/ipod-interface.astro";
         
         <div class="space-y-16">
             <div class="image-float">
-                <img src="https://placehold.co/1400x900?text=Final+Mirror+Interface" alt="Final mirror interface" class="w-full rounded-2xl shadow-2xl" />
+                <img src="/mm-hero.png" alt="Final mirror interface" class="w-full rounded-2xl shadow-2xl" />
             </div>
 
             <div class="grid md:grid-cols-4 gap-6">
