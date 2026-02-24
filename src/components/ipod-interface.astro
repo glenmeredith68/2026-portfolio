@@ -108,13 +108,20 @@ const utilityKeys = pageKeys.filter(key => !pages[key].isProject);
     }
   }
 
-  // Helper to update content
-  function updateContent(pageKey) {
-    contentDiv.innerHTML = pages[pageKey].content;
-    setTimeout(() => {
-      initNewScrollAnimations();
-    }, 0);
+// Helper to update content
+function updateContent(pageKey) {
+  contentDiv.innerHTML = pages[pageKey].content;
+  
+  // Scroll to top when switching pages
+  const scrollContainer = contentDiv.closest('.overflow-auto');
+  if (scrollContainer) {
+    scrollContainer.scrollTop = 0;
   }
+  
+  setTimeout(() => {
+    initNewScrollAnimations();
+  }, 0);
+}
 
   // Click handlers for all menu items
   allMenuItems.forEach((item) => {
