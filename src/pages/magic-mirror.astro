@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Sidebar from "../components/sidebar.astro";
+
+const pageTitle = "Magic Mirror | Glen Meredith";
+---
+
+<Layout title={pageTitle}>
+    <div class="flex h-screen">
+        <Sidebar currentPage="magic-mirror" />
+        
+        <div class="flex-1 bg-white p-8 overflow-auto">
+            <div id="content">
+                <!-- Hero Section -->
+<section class="hero-gradient text-white py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+        <div class="mb-6">
+            <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+                UX Design · 13 Weeks · Team of 3
+            </span>
+        </div>
+        <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">Magic Mirror</h1>
+        <p class="text-2xl md:text-3xl font-light max-w-2xl leading-relaxed opacity-90">
+            A smart closet interface that eliminates outfit planning stress through integrated weather, schedule, and wardrobe management.
+        </p>
+    </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Hero Image -->
+    <div class="scroll-reveal mb-24 -mt-16 relative z-10">
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <img src="/mm-hero-75.webp" alt="Final Magic Mirror interface" class="w-full" />
+        </div>
+        <p class="text-xs text-gray-400 text-right mt-2">
+    Photo by <a href="https://unsplash.com/@jpvalery" 
+    target="_blank" class="underline hover:text-gray-300">
+    JP Valery</a> on 
+    <a href="https://unsplash.com" target="_blank" 
+    class="underline hover:text-gray-300">Unsplash</a>
+</p>
+        <p class="text-center text-gray-500 mt-6 text-sm uppercase tracking-wider">Final Design · Mirror Home Screen</p>
+    </div>
+
+    <!-- REST OF MAGIC MIRROR CONTENT HERE -->
+    <!-- Copy from your existing project1 content -->
+
+</div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<script>
+  // Scroll reveal observer
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+  
+  if (revealElements.length > 0) {
+    const scrollObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    );
+
+    revealElements.forEach(el => scrollObserver.observe(el));
+  }
+</script>

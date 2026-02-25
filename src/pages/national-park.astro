@@ -1,0 +1,1241 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Sidebar from "../components/sidebar.astro";
+---
+
+<Layout title="National Park App | Glen Meredith">
+    <div class="flex h-screen">
+        <Sidebar currentPage="national-park" />
+
+        <div class="flex-1 bg-white p-8 overflow-auto">
+            <div id="content">
+                <!-- Hero Section -->
+                <section class="hero-gradient text-white py-24 px-6">
+                    <div class="max-w-5xl mx-auto">
+                        <div class="mb-6">
+                            <span
+                                class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium"
+                            >
+                                Mobile App Design · Academic Project · 4 Weeks
+                            </span>
+                        </div>
+                        <h1
+                            class="text-6xl md:text-7xl font-black mb-6 leading-tight"
+                        >
+                            National Park App
+                        </h1>
+                        <p
+                            class="text-2xl md:text-3xl font-light max-w-2xl leading-relaxed opacity-90"
+                        >
+                            Making national parks accessible and exciting for
+                            newcomers through AR-powered wildlife collection and
+                            gamified exploration.
+                        </p>
+                    </div>
+                </section>
+
+                <div class="max-w-7xl mx-auto px-6">
+                    <!-- Hero Image -->
+                    <div class="scroll-reveal mb-24 -mt-16 relative z-10">
+                        <div
+                            class="bg-white rounded-2xl shadow-2xl overflow-hidden"
+                        >
+                            <img
+                                src="/np-hero.webp"
+                                alt="National Park App final interface"
+                                class="w-full"
+                            />
+                        </div>
+                        <p
+                            class="text-center text-gray-500 mt-6 text-sm uppercase tracking-wider"
+                        >
+                            Final Design · Black Canyon of the Gunnison
+                        </p>
+                    </div>
+
+                    <!-- The Problem -->
+                    <div class="grid md:grid-cols-5 gap-12 mb-32 scroll-reveal">
+                        <div class="md:col-span-3">
+                            <h2 class="text-5xl font-black mb-8 leading-tight">
+                                Finding the Gap
+                            </h2>
+                            <div
+                                class="space-y-6 text-lg text-gray-700 leading-relaxed"
+                            >
+                                <p class="text-2xl font-medium text-gray-900">
+                                    During class discussions for our National
+                                    Park app project, I noticed a
+                                    pattern—everyone was designing trip-planning
+                                    tools.
+                                </p>
+                                <p>
+                                    Trail maps, permit systems, camping
+                                    reservations. My classmates and existing
+                                    apps all targeted the same audience:
+                                    experienced hikers who already knew they
+                                    wanted to visit the park.
+                                </p>
+                                <p>
+                                    <strong
+                                        >But what about people who find outdoor
+                                        recreation intimidating?</strong
+                                    > People who might be curious about national parks
+                                    but don't know where to start? That's an underserved
+                                    audience no one was designing for.
+                                </p>
+                                <div
+                                    class="bg-amber-50 border-l-4 border-amber-600 p-6 rounded-r-lg my-8"
+                                >
+                                    <p class="font-bold text-amber-900 mb-2">
+                                        Design Opportunity
+                                    </p>
+                                    <p class="text-gray-700">
+                                        Create an accessible, engaging entry
+                                        point for casual visitors—making the
+                                        park experience feel achievable and fun,
+                                        not intimidating.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="bg-gray-900 text-white rounded-2xl p-8">
+                                <h3
+                                    class="text-sm uppercase tracking-wider text-gray-400 mb-6"
+                                >
+                                    Project Details
+                                </h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <p
+                                            class="text-xs uppercase tracking-wider text-gray-400 mb-1"
+                                        >
+                                            Role
+                                        </p><p class="text-xl font-bold">
+                                            UX/UI Designer
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-xs uppercase tracking-wider text-gray-400 mb-1"
+                                        >
+                                            Duration
+                                        </p><p class="text-xl font-bold">
+                                            4 Weeks
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-xs uppercase tracking-wider text-gray-400 mb-1"
+                                        >
+                                            Context
+                                        </p><p class="text-xl font-bold">
+                                            Academic Design Project
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-xs uppercase tracking-wider text-gray-400 mb-1"
+                                        >
+                                            Park
+                                        </p><p class="text-xl font-bold">
+                                            Black Canyon of the Gunnison
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-xs uppercase tracking-wider text-gray-400 mb-1"
+                                        >
+                                            Tools
+                                        </p><p class="text-xl font-bold">
+                                            Figma, FigJam
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competitive Landscape -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            Competitive<br />Landscape
+                        </h2>
+
+                        <p
+                            class="text-xl text-gray-700 leading-relaxed max-w-3xl mb-12"
+                        >
+                            I surveyed existing National Park apps and reviewed
+                            my classmates' project proposals to understand the
+                            competitive space.
+                        </p>
+
+                        <div class="grid md:grid-cols-3 gap-6 mb-16">
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-bold mb-3">
+                                    NPS Official App
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    Dense trail maps, permit systems,
+                                    educational content
+                                </p>
+                                <p class="text-sm text-gray-500 italic">
+                                    For: Park regulars
+                                </p>
+                            </div>
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-bold mb-3">
+                                    AllTrails
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    Route planning, difficulty ratings, user
+                                    reviews
+                                </p>
+                                <p class="text-sm text-gray-500 italic">
+                                    For: Serious hikers
+                                </p>
+                            </div>
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-bold mb-3">
+                                    Classmates' Apps
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    Trip itineraries, camping reservations,
+                                    safety guides
+                                </p>
+                                <p class="text-sm text-gray-500 italic">
+                                    For: Trip planners
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-br from-amber-700 to-orange-800 text-white rounded-2xl p-12 diagonal-section"
+                        >
+                            <div class="max-w-3xl">
+                                <p
+                                    class="text-sm uppercase tracking-wider mb-4 opacity-80"
+                                >
+                                    The Gap
+                                </p>
+                                <p
+                                    class="text-3xl md:text-4xl font-bold leading-snug mb-6"
+                                >
+                                    Every app assumed users already wanted to
+                                    hike. No one was designing for newcomers who
+                                    needed encouragement and guidance.
+                                </p>
+                                <p class="text-xl opacity-90">
+                                    <strong>My positioning:</strong> Be the Duolingo
+                                    of national parks—make outdoor recreation feel
+                                    achievable and fun, not intimidating.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Target User -->
+                    <div class="mb-32 scroll-reveal">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h2
+                                    class="text-5xl font-black mb-8 leading-tight"
+                                >
+                                    Who This Is For
+                                </h2>
+                                <div class="bg-white rounded-xl p-8 shadow-lg">
+                                    <h3 class="text-2xl font-bold mb-4">
+                                        Sarah, 28
+                                    </h3>
+                                    <p class="text-gray-600 mb-6">
+                                        Lives in Denver but rarely hikes
+                                    </p>
+                                    <ul class="space-y-3 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="text-green-600 mr-2"
+                                                >•</span
+                                            >
+                                            Curious about nearby national parks but
+                                            finds them intimidating
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-green-600 mr-2"
+                                                >•</span
+                                            >
+                                            Enjoys casual mobile games (Wordle, Pokémon
+                                            GO nostalgia)
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-green-600 mr-2"
+                                                >•</span
+                                            >
+                                            Wants Instagram-worthy experiences but
+                                            doesn't know where to find them
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-green-600 mr-2"
+                                                >•</span
+                                            >
+                                            Worried about getting lost or not being
+                                            "outdoorsy enough"
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="bg-amber-50 border-l-4 border-amber-600 p-8 rounded-r-lg"
+                                >
+                                    <h3
+                                        class="text-xl font-bold text-amber-900 mb-4"
+                                    >
+                                        What She Needs
+                                    </h3>
+                                    <p
+                                        class="text-gray-700 text-lg leading-relaxed"
+                                    >
+                                        A low-stakes, guided way to explore that
+                                        feels more like a game than hardcore
+                                        hiking. Something familiar,
+                                        approachable, and rewarding—even for
+                                        beginners.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Strategy -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            Design<br />Strategy
+                        </h2>
+
+                        <div class="grid md:grid-cols-2 gap-12 mb-12">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-6">
+                                    Why Gamification?
+                                </h3>
+                                <p
+                                    class="text-xl text-gray-700 leading-relaxed mb-6"
+                                >
+                                    Pokémon GO demonstrated that AR-based
+                                    collection mechanics could get people who
+                                    normally stay indoors excited about
+                                    exploring their surroundings.
+                                </p>
+                                <p
+                                    class="text-lg text-gray-700 leading-relaxed"
+                                >
+                                    Players walked miles to find rare Pokémon,
+                                    discovered new neighborhoods, and engaged
+                                    with their environment in ways they never
+                                    had before. <strong
+                                        >What if we applied this proven mechanic
+                                        to national parks?</strong
+                                    >
+                                </p>
+                            </div>
+                            <div class="bg-green-50 rounded-xl p-8">
+                                <h3 class="text-xl font-bold mb-6">
+                                    The Parallel
+                                </h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <span class="text-2xl mr-4">🎮</span>
+                                        <div>
+                                            <p class="font-bold">Pokémon GO</p>
+                                            <p class="text-gray-600 text-sm">
+                                                Collect rare Pokémon → Explore
+                                                neighborhoods
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <span class="text-2xl mr-4">🏞️</span>
+                                        <div>
+                                            <p class="font-bold">
+                                                National Park App
+                                            </p>
+                                            <p class="text-gray-600 text-sm">
+                                                Collect native wildlife →
+                                                Explore trails
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900 text-white rounded-2xl p-12">
+                            <h3 class="text-2xl font-bold mb-6">
+                                Strategic Decision
+                            </h3>
+                            <p class="text-xl opacity-90 leading-relaxed">
+                                Leverage a familiar, proven engagement model.
+                                Make the park experience accessible and fun for
+                                newcomers by using interaction patterns they
+                                already understand.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Core Features -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            Core<br />Features
+                        </h2>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div
+                                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                            >
+                                <div class="text-4xl mb-4">📸</div>
+                                <h3 class="text-2xl font-bold mb-3">
+                                    AR Camera View
+                                </h3>
+                                <p class="text-gray-600 text-lg">
+                                    Scan wildlife in real-time using your phone
+                                    camera—just like Pokémon GO
+                                </p>
+                            </div>
+                            <div
+                                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                            >
+                                <div class="text-4xl mb-4">🦌</div>
+                                <h3 class="text-2xl font-bold mb-3">
+                                    Wildlife Collection
+                                </h3>
+                                <p class="text-gray-600 text-lg">
+                                    Build your personal gallery of captured
+                                    animals with educational info
+                                </p>
+                            </div>
+                            <div
+                                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                            >
+                                <div class="text-4xl mb-4">🥾</div>
+                                <h3 class="text-2xl font-bold mb-3">
+                                    Trail Integration
+                                </h3>
+                                <p class="text-gray-600 text-lg">
+                                    See which animals are found on each trail to
+                                    guide your exploration
+                                </p>
+                            </div>
+                            <div
+                                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                            >
+                                <div class="text-4xl mb-4">🏆</div>
+                                <h3 class="text-2xl font-bold mb-3">
+                                    Leaderboard
+                                </h3>
+                                <p class="text-gray-600 text-lg">
+                                    Earn points for hikes and collections to
+                                    climb the rankings
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initial Design Process -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            Initial<br />Design
+                        </h2>
+
+                        <p
+                            class="text-xl text-gray-700 leading-relaxed max-w-3xl mb-12"
+                        >
+                            I started with a moodboard on FigJam featuring Black
+                            Canyon of the Gunnison imagery, color palettes drawn
+                            from nature, and initial feature brainstorming.
+                        </p>
+
+                        <div class="image-float mb-16">
+                            <img
+                                src="/np-moodboard.webp"
+                                alt="Design moodboard"
+                                class="w-full rounded-xl shadow-lg"
+                            />
+                            <p class="text-center text-gray-500 mt-4 text-sm">
+                                Moodboard exploring park aesthetics and app
+                                features
+                            </p>
+                        </div>
+
+                        <h3 class="text-3xl font-bold mb-8">
+                            Sketching Key Screens
+                        </h3>
+                        <p
+                            class="text-lg text-gray-700 leading-relaxed max-w-3xl mb-8"
+                        >
+                            I sketched essential screens to explore how the app
+                            would work. For a Pokémon GO-style app, I knew I
+                            needed: AR camera view, capture confirmation,
+                            collection gallery, and trail information.
+                        </p>
+
+                        <div class="image-float">
+                            <img
+                                src="np-sketches.webp"
+                                alt="Early sketches"
+                                class="w-full rounded-xl shadow-lg"
+                            />
+                            <p class="text-center text-gray-500 mt-4 text-sm">
+                                Early sketches exploring core screens and user
+                                flows
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- User Feedback Iteration -->
+                    <div class="mb-32 scroll-reveal">
+                        <div
+                            class="bg-white rounded-2xl p-12 md:p-16 shadow-xl"
+                        >
+                            <span
+                                class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+                                >Iteration</span
+                            >
+                            <h2
+                                class="text-4xl md:text-5xl font-black mb-8 leading-tight"
+                            >
+                                Learning from Users
+                            </h2>
+                            <div class="grid md:grid-cols-2 gap-12">
+                                <div>
+                                    <p
+                                        class="text-xl text-gray-700 leading-relaxed mb-6"
+                                    >
+                                        After talking with a classmate who hikes
+                                        regularly, I realized my initial hikes
+                                        screen was missing critical information.
+                                    </p>
+                                    <p
+                                        class="text-lg text-gray-700 leading-relaxed"
+                                    >
+                                        <strong>The insight:</strong> Hikers need
+                                        to see trail photos (for visual appeal) and
+                                        key stats like distance and elevation prominently
+                                        displayed—not buried below the fold.
+                                    </p>
+                                </div>
+                                <div class="image-float">
+                                    <img
+                                        src="/np-hikes.webp"
+                                        alt="Hikes screen iteration from list to cards"
+                                        class="w-full rounded-xl shadow-lg"
+                                    />
+                                    <p
+                                        class="text-center text-gray-500 mt-4 text-sm"
+                                    >
+                                        Redesigned hikes screen with better
+                                        information hierarchy
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Screen Hierarchy Redesign -->
+                    <div class="mb-32 scroll-reveal">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <span
+                                    class="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+                                    >Design Pivot</span
+                                >
+                                <h2
+                                    class="text-4xl md:text-5xl font-black mb-8 leading-tight"
+                                >
+                                    Camera as Home Screen
+                                </h2>
+                                <p
+                                    class="text-xl text-gray-700 leading-relaxed mb-6"
+                                >
+                                    Originally, the app opened to a menu where
+                                    you could select camera mode or view your
+                                    collection. After discussing with a designer
+                                    friend, I realized: <strong
+                                        >the main activity should BE the home
+                                        screen.</strong
+                                    >
+                                </p>
+                                <div
+                                    class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg"
+                                >
+                                    <p class="text-gray-700">
+                                        This mirrors Pokémon GO's familiar
+                                        structure. No need to reinvent the wheel
+                                        when users already understand the
+                                        pattern. It also eliminates the need for
+                                        a tutorial screen.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="image-float">
+                                    <img
+                                        src="/np-camera.webp"
+                                        alt="Camera as home screen"
+                                        class="w-full rounded-xl shadow-lg mx-auto max-w-sm"
+                                    />
+                                    <p
+                                        class="text-center text-gray-500 mt-4 text-sm"
+                                    >
+                                        AR camera view as the primary screen
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- High-Fidelity First Draft -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            Mid-Fidelity<br />Draft
+                        </h2>
+
+                        <p
+                            class="text-xl text-gray-700 leading-relaxed max-w-3xl mb-12"
+                        >
+                            Mid-fidelity screens exploring the app structure
+                            before gamification elements were added.
+                        </p>
+
+                        <div class="image-float mb-12">
+                            <img
+                                src="/np-midfi.webp"
+                                alt="First high-fidelity designs"
+                                class="w-full rounded-xl shadow-lg"
+                            />
+                            <p class="text-center text-gray-500 mt-4 text-sm">
+                                Initial mid-fidelity designs—functional but
+                                lacking engagement
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-xl p-8">
+                            <p class="text-lg text-gray-700 italic">
+                                The app worked. AR scanning made sense.
+                                Collections were clear. Trail info was
+                                organized. But something was missing...
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- The Pizzazz Moment -->
+                    <div class="mb-32 scroll-reveal">
+                        <div
+                            class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-12 md:p-16"
+                        >
+                            <h2
+                                class="text-5xl md:text-6xl font-black mb-6 leading-tight"
+                            >
+                                The Feedback<br />That Changed<br />Everything
+                            </h2>
+                            <p
+                                class="text-2xl opacity-90 mb-8 max-w-2xl leading-relaxed"
+                            >
+                                After presenting my initial designs in critique,
+                                Professor Steve stopped me in my tracks:
+                            </p>
+
+                            <div
+                                class="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8"
+                            >
+                                <p class="text-2xl font-bold mb-4">
+                                    "The designs look functional, but they lack
+                                    intentionality. Where's the pizzazz?"
+                                </p>
+                            </div>
+
+                            <p class="text-xl opacity-90 mb-6 leading-relaxed">
+                                He was right. I had created a perfectly <em
+                                    >usable</em
+                                > app—AR scanning worked, collections made sense,
+                                trail info was clear.
+                            </p>
+
+                            <p class="text-xl opacity-90 leading-relaxed">
+                                But there was nothing that made you <em>want</em
+                                > to use it. Nothing that sparked excitement about
+                                hiking. <strong
+                                    >It was utilitarian without being engaging.</strong
+                                >
+                            </p>
+
+                            <div class="mt-12 border-t border-white/20 pt-8">
+                                <p class="text-2xl font-bold">
+                                    This became the project's pivotal moment:
+                                    How do you transform a functional design
+                                    into an experience people actually desire?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Solution: Gamification -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            The<br />Breakthrough
+                        </h2>
+
+                        <div
+                            class="grid md:grid-cols-2 gap-12 items-center mb-16"
+                        >
+                            <div>
+                                <span
+                                    class="inline-block bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+                                    >Inspiration</span
+                                >
+                                <h3 class="text-3xl font-bold mb-6">
+                                    PlayStation Trophies
+                                </h3>
+                                <p
+                                    class="text-xl text-gray-700 leading-relaxed mb-6"
+                                >
+                                    After discussing the "pizzazz" problem with
+                                    my designer friend, we were reminded of
+                                    PlayStation trophies and their rarity
+                                    rankings.
+                                </p>
+                                <p
+                                    class="text-lg text-gray-700 leading-relaxed"
+                                >
+                                    <strong>The insight:</strong> The rarer the trophy,
+                                    the more you want it. What if we applied this
+                                    psychology to wildlife collection?
+                                </p>
+                            </div>
+                            <div
+                                class="bg-gradient-to-br from-amber-700 to-orange-800 text-white rounded-xl p-8"
+                            >
+                                <h3 class="text-xl font-bold mb-6">
+                                    Gamification Elements
+                                </h3>
+                                <div class="space-y-4">
+                                    <div
+                                        class="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                                    >
+                                        <p class="font-bold mb-1">
+                                            Rarity System
+                                        </p>
+                                        <p class="text-sm opacity-90">
+                                            Common → Uncommon → Rare → Legendary
+                                            animals with color coding
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                                    >
+                                        <p class="font-bold mb-1">
+                                            Collection Teasers
+                                        </p>
+                                        <p class="text-sm opacity-90">
+                                            Silhouettes of uncollected animals
+                                            drive discovery
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                                    >
+                                        <p class="font-bold mb-1">
+                                            Trail Features
+                                        </p>
+                                        <p class="text-sm opacity-90">
+                                            Shows which animals are common on
+                                            each trail
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                                    >
+                                        <p class="font-bold mb-1">
+                                            Points System
+                                        </p>
+                                        <p class="text-sm opacity-90">
+                                            Hikes award gold points for
+                                            leaderboard status
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discovery Mechanic (THE SECRET WEAPON) -->
+                    <div class="mb-32 scroll-reveal">
+                        <div class="bg-green-50 rounded-2xl p-12 md:p-16">
+                            <h2
+                                class="text-4xl md:text-5xl font-black mb-8 leading-tight"
+                            >
+                                Designing for Discovery
+                            </h2>
+
+                            <p
+                                class="text-xl text-gray-700 leading-relaxed mb-8 max-w-3xl"
+                            >
+                                The rarity system isn't just fun—it's a
+                                strategic tool for encouraging meaningful
+                                exploration.
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                                <div class="bg-white rounded-xl p-6">
+                                    <h3
+                                        class="text-xl font-bold mb-3 text-green-900"
+                                    >
+                                        Common Animals
+                                    </h3>
+                                    <p class="text-gray-700 mb-4">
+                                        Appear on popular, well-trafficked
+                                        trails
+                                    </p>
+                                    <p class="text-sm text-gray-600 italic">
+                                        → Easy wins for beginners, builds
+                                        confidence
+                                    </p>
+                                </div>
+                                <div class="bg-white rounded-xl p-6">
+                                    <h3
+                                        class="text-xl font-bold mb-3 text-amber-900"
+                                    >
+                                        Rare/Legendary Animals
+                                    </h3>
+                                    <p class="text-gray-700 mb-4">
+                                        Appear on challenging or lesser-known
+                                        trails
+                                    </p>
+                                    <p class="text-sm text-gray-600 italic">
+                                        → Incentivizes adventurous exploration
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-gradient-to-br from-green-700 to-teal-800 text-white rounded-xl p-8"
+                            >
+                                <h3 class="text-2xl font-bold mb-4">
+                                    The Strategic Impact
+                                </h3>
+                                <p
+                                    class="text-lg opacity-90 leading-relaxed mb-4"
+                                >
+                                    Instead of everyone clustering at popular
+                                    overlooks, the app guides visitors to
+                                    discover hidden waterfalls, quiet trails,
+                                    and unique ecosystems they might otherwise
+                                    never see.
+                                </p>
+                                <p class="text-lg opacity-90 leading-relaxed">
+                                    <strong>This benefits both users</strong> (richer
+                                    park experience) <strong
+                                        >and the park itself</strong
+                                    > (distributes visitor traffic, reduces crowding
+                                    at popular sites).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Before/After Transformation -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            The<br />Transformation
+                        </h2>
+
+                        <p
+                            class="text-xl text-gray-700 leading-relaxed max-w-3xl mb-12"
+                        >
+                            Adding rarity colors, collection teasers,
+                            trail-specific animal features, and a points system
+                            transformed the app from functional to engaging.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-8 mb-12">
+                            <div>
+                                <div
+                                    class="bg-red-50 px-4 py-2 inline-block rounded-full mb-4"
+                                >
+                                    <span
+                                        class="text-red-700 font-medium text-sm"
+                                        >Before: Functional</span
+                                    >
+                                </div>
+                                <div class="image-float">
+                                    <img
+                                        src="/np-collection-bad.webp"
+                                        alt="Before gamification"
+                                        class="w-full rounded-xl shadow-lg"
+                                    />
+                                </div>
+                                <ul class="text-gray-600 mt-6 space-y-2">
+                                    <li>✓ AR scanning works</li>
+                                    <li>✓ Collections make sense</li>
+                                    <li>✓ Trail info is clear</li>
+                                    <li>✗ No emotional engagement</li>
+                                    <li>✗ No reason to explore more</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div
+                                    class="bg-green-50 px-4 py-2 inline-block rounded-full mb-4"
+                                >
+                                    <span
+                                        class="text-green-700 font-medium text-sm"
+                                        >After: Engaging</span
+                                    >
+                                </div>
+                                <div class="image-float">
+                                    <img
+                                        src="/np-collection-good.webp"
+                                        alt="After gamification"
+                                        class="w-full rounded-xl shadow-lg"
+                                    />
+                                </div>
+                                <ul class="text-gray-600 mt-6 space-y-2">
+                                    <li>
+                                        ✓ Color-coded rarity creates excitement
+                                    </li>
+                                    <li>
+                                        ✓ Collection teasers drive curiosity
+                                    </li>
+                                    <li>✓ Trail features guide exploration</li>
+                                    <li>✓ Points system rewards progress</li>
+                                    <li>✓ Want to discover more</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Design Showcase -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            Final<br />Design
+                        </h2>
+
+                        <div class="space-y-16">
+                            <div class="image-float">
+                                <img
+                                    src="/np-hero.webp"
+                                    alt="Final app screens"
+                                    class="w-full rounded-2xl shadow-2xl"
+                                />
+                            </div>
+
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div class="bg-white rounded-xl p-8 shadow-lg">
+                                    <div
+                                        class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+                                    >
+                                        <svg
+                                            class="w-8 h-8 text-green-600"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                                            ></path>
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-3">
+                                        AR Scanning
+                                    </h3>
+                                    <p class="text-gray-600">
+                                        Point, scan, capture—familiar
+                                        interaction from Pokémon GO
+                                    </p>
+                                </div>
+
+                                <div class="bg-white rounded-xl p-8 shadow-lg">
+                                    <div
+                                        class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+                                    >
+                                        <svg
+                                            class="w-8 h-8 text-amber-600"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-3">
+                                        Rarity System
+                                    </h3>
+                                    <p class="text-gray-600">
+                                        Color-coded tiers create excitement and
+                                        drive exploration
+                                    </p>
+                                </div>
+
+                                <div class="bg-white rounded-xl p-8 shadow-lg">
+                                    <div
+                                        class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+                                    >
+                                        <svg
+                                            class="w-8 h-8 text-orange-600"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-3">
+                                        Discovery Mechanic
+                                    </h3>
+                                    <p class="text-gray-600">
+                                        Rare animals on hidden trails encourage
+                                        meaningful exploration
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Takeaways -->
+                    <div class="mb-32 scroll-reveal">
+                        <h2
+                            class="text-5xl md:text-6xl font-black mb-16 leading-tight"
+                        >
+                            Key<br />Takeaways
+                        </h2>
+
+                        <div class="space-y-8">
+                            <div
+                                class="bg-gradient-to-br from-green-700 to-green-900 text-white rounded-2xl p-10"
+                            >
+                                <div class="text-4xl font-black mb-6">01</div>
+                                <h3 class="text-3xl font-bold mb-4">
+                                    Find the Underserved Audience
+                                </h3>
+                                <p
+                                    class="text-xl opacity-90 mb-6 leading-relaxed"
+                                >
+                                    When everyone zigs (trip planning apps),
+                                    look for who's being left behind (casual
+                                    visitors). Sometimes the biggest opportunity
+                                    is the audience no one else is designing
+                                    for.
+                                </p>
+                                <div
+                                    class="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                                >
+                                    <p class="italic">
+                                        <strong>Learning:</strong> Observing patterns
+                                        in class discussions and existing apps revealed
+                                        a gap I could uniquely fill. Strategic positioning
+                                        matters.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-gradient-to-br from-amber-700 to-orange-800 text-white rounded-2xl p-10"
+                            >
+                                <div class="text-4xl font-black mb-6">02</div>
+                                <h3 class="text-3xl font-bold mb-4">
+                                    Leverage Proven Patterns, Don't Reinvent
+                                </h3>
+                                <p
+                                    class="text-xl opacity-90 mb-6 leading-relaxed"
+                                >
+                                    Pokémon GO already solved the "get people
+                                    excited about exploring" problem. Instead of
+                                    creating a new interaction model from
+                                    scratch, I adapted a familiar pattern to a
+                                    new context.
+                                </p>
+                                <div
+                                    class="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                                >
+                                    <p class="italic">
+                                        <strong>Learning:</strong> Familiar doesn't
+                                        mean derivative—it means accessible. Innovation
+                                        can be applying existing solutions to new
+                                        problems.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-gradient-to-br from-blue-700 to-cyan-700 text-white rounded-2xl p-10"
+                            >
+                                <div class="text-4xl font-black mb-6">03</div>
+                                <h3 class="text-3xl font-bold mb-4">
+                                    Functional is the Baseline, Not the Goal
+                                </h3>
+                                <p
+                                    class="text-xl opacity-90 mb-6 leading-relaxed"
+                                >
+                                    Before this project, I focused heavily on
+                                    making things work correctly: clear
+                                    information architecture, intuitive flows,
+                                    accessible layouts. Those are important, but
+                                    they're table stakes.
+                                </p>
+                                <div
+                                    class="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                                >
+                                    <p class="italic mb-4">
+                                        The "pizzazz" moment taught me that
+                                        great design needs an emotional
+                                        hook—something that makes people <em
+                                            >want</em
+                                        > to engage, not just <em>able</em> to engage.
+                                    </p>
+                                    <p class="italic">
+                                        <strong>Learning:</strong> Always ask "Would
+                                        I be excited to use this?" If the answer is
+                                        just "It works fine," you're not done yet.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-gradient-to-br from-teal-700 to-green-800 text-white rounded-2xl p-10"
+                            >
+                                <div class="text-4xl font-black mb-6">04</div>
+                                <h3 class="text-3xl font-bold mb-4">
+                                    Features Can Serve Multiple Goals
+                                </h3>
+                                <p
+                                    class="text-xl opacity-90 mb-6 leading-relaxed"
+                                >
+                                    The rarity system wasn't just fun—it
+                                    strategically distributed visitors across
+                                    the park, benefiting both users (less
+                                    crowding, more discovery) and park
+                                    management (reduced strain on popular
+                                    sites).
+                                </p>
+                                <div
+                                    class="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                                >
+                                    <p class="italic">
+                                        <strong>Learning:</strong> Great design solves
+                                        more than one problem. Look for features that
+                                        create value for multiple stakeholders.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reflection -->
+                    <div class="mb-24 scroll-reveal">
+                        <div
+                            class="bg-gray-900 text-white rounded-2xl p-12 md:p-16"
+                        >
+                            <h2
+                                class="text-4xl md:text-5xl font-black mb-8 leading-tight"
+                            >
+                                Project<br />Reflection
+                            </h2>
+
+                            <div class="max-w-3xl">
+                                <p
+                                    class="text-xl opacity-90 mb-8 leading-relaxed"
+                                >
+                                    This project taught me that identifying an
+                                    underserved audience and designing
+                                    specifically for their needs can create more
+                                    impact than competing in a saturated space.
+                                </p>
+
+                                <p
+                                    class="text-xl opacity-90 mb-8 leading-relaxed"
+                                >
+                                    The "pizzazz" critique was uncomfortable but
+                                    invaluable. It pushed me beyond my comfort
+                                    zone of functional design into thinking
+                                    about emotional engagement and desire.
+                                </p>
+
+                                <p class="text-xl opacity-90 leading-relaxed">
+                                    If I were to continue this project, I'd love
+                                    to test the app with actual park newcomers
+                                    to validate whether the gamification truly
+                                    makes them more excited about hiking—and
+                                    whether the discovery mechanic successfully
+                                    guides them to lesser-known trails.
+                                </p>
+                            </div>
+
+                            <div class="mt-12 pt-8 border-t border-white/20">
+                                <p class="text-lg opacity-75">
+                                    Interested in working together? Let's chat
+                                    about making experiences more accessible and
+                                    engaging.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<script>
+    // Scroll reveal observer
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+
+    if (revealElements.length > 0) {
+        const scrollObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("revealed");
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+                rootMargin: "0px 0px -100px 0px",
+            },
+        );
+
+        revealElements.forEach((el) => scrollObserver.observe(el));
+    }
+</script>
