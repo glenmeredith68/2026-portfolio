@@ -6,20 +6,34 @@ interface Props {
 const { currentPage } = Astro.props;
 
 const projects = [
-  { id: 'magic-mirror', title: 'Magic Mirror', meta: 'UX Design • 2 Weeks', url: '/magic-mirror' },
-  { id: 'national-park', title: 'National Park App', meta: 'Product Design • 4 Weeks', url: '/national-park' },
-  { id: 'family-promise', title: 'Family Promise', meta: 'UX Research • 5 Weeks', url: '/family-promise' }
+  {
+    id: "magic-mirror",
+    title: "Magic Mirror",
+    meta: "UX Design • 2 Weeks",
+    url: "/magic-mirror",
+  },
+  {
+    id: "national-park",
+    title: "National Park App",
+    meta: "Product Design • 4 Weeks",
+    url: "/national-park",
+  },
+  {
+    id: "family-promise",
+    title: "Family Promise",
+    meta: "UX Research • 5 Weeks",
+    url: "/family-promise",
+  },
 ];
 
 const utilityPages = [
-  { id: 'about', title: 'About', url: '/about' },
-  { id: 'contact', title: 'Contact', url: '/contact' }
+  { id: "about", title: "About", url: "/about" },
+  { id: "contact", title: "Contact", url: "/contact" },
 ];
 ---
 
 <div class="sidebar">
-  
-  <!-- Header - Now Clickable -->
+  <!-- Header - Clickable -->
   <a href="/" class="sidebar-header-link">
     <div class="sidebar-header">
       <h1>Glen Meredith</h1>
@@ -27,42 +41,36 @@ const utilityPages = [
     </div>
   </a>
 
-  <!-- Home Link (Optional - uncomment if you want it) -->
-  <!-- <div class="home-section">
-    <a
-      href="/"
-      class:list={['utility-item', { active: currentPage === 'home' }]}
-    >
-      Home
-    </a>
-  </div> -->
-
   <!-- Projects Section -->
   <div class="projects-section">
-    {projects.map((project) => (
-      <a
-        href={project.url}
-        class:list={['project-item', { active: currentPage === project.id }]}
-      >
-        <div class="project-title">{project.title}</div>
-        <div class="project-meta">{project.meta}</div>
-      </a>
-    ))}
+    {
+      projects.map((project) => (
+        <a
+          href={project.url}
+          class:list={["project-item", { active: currentPage === project.id }]}
+        >
+          <div class="project-title">{project.title}</div>
+          <div class="project-meta">{project.meta}</div>
+        </a>
+      ))
+    }
   </div>
 
   <!-- Divider -->
   <div class="menu-divider"></div>
 
-  <!-- Utility Section -->
+  <!-- Utility Section - BACK BELOW PROJECTS -->
   <div class="utility-section">
-    {utilityPages.map((page) => (
-      <a
-        href={page.url}
-        class:list={['utility-item', { active: currentPage === page.id }]}
-      >
-        {page.title}
-      </a>
-    ))}
+    {
+      utilityPages.map((page) => (
+        <a
+          href={page.url}
+          class:list={["utility-item", { active: currentPage === page.id }]}
+        >
+          {page.title}
+        </a>
+      ))
+    }
   </div>
 </div>
 
@@ -86,7 +94,7 @@ const utilityPages = [
 
   .sidebar-header-link:hover .sidebar-header {
     background: rgba(255, 255, 255, 0.03);
-    text-decoration:underline #10b981 2px;
+    text-decoration: underline #10b981 2px;
   }
 
   /* Sidebar Header */
@@ -97,7 +105,7 @@ const utilityPages = [
   }
 
   .sidebar-header h1 {
-    font-family: 'Crimson Pro', serif;
+    font-family: "Crimson Pro", serif;
     font-size: 28px;
     font-weight: 800;
     margin-bottom: 6px;
@@ -108,12 +116,6 @@ const utilityPages = [
     font-size: 15px;
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
-  }
-
-  /* Optional Home Section (commented out by default) */
-  .home-section {
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* Projects Section */
@@ -147,7 +149,7 @@ const utilityPages = [
   }
 
   .project-title {
-    font-family: 'Crimson Pro', serif;
+    font-family: "Crimson Pro", serif;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 4px;
@@ -169,7 +171,7 @@ const utilityPages = [
     margin: 12px 0;
   }
 
-  /* Utility Section */
+  /* Utility Section - MORE PROMINENT */
   .utility-section {
     padding: 8px 0 24px;
   }
@@ -178,24 +180,24 @@ const utilityPages = [
     display: block;
     width: 100%;
     text-align: left;
-    padding: 14px 24px;
+    padding: 16px 24px; /* increased from 14px */
     border: none;
     background: transparent;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-size: 15px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px; /* increased from 15px */
+    font-weight: 600; /* increased from 500 */
+    color: rgba(255, 255, 255, 0.85); /* slightly brighter */
     text-decoration: none;
   }
 
   .utility-item:hover {
     background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 1);
   }
 
   .utility-item.active {
     background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 1);
   }
 </style>
