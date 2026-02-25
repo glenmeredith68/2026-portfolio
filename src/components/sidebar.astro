@@ -19,11 +19,23 @@ const utilityPages = [
 
 <div class="sidebar">
   
-  <!-- Header -->
-  <div class="sidebar-header">
-    <h1>Glen Meredith</h1>
-    <p class="subtitle">UX Designer & Researcher</p>
-  </div>
+  <!-- Header - Now Clickable -->
+  <a href="/" class="sidebar-header-link">
+    <div class="sidebar-header">
+      <h1>Glen Meredith</h1>
+      <p class="subtitle">UX Designer & Researcher</p>
+    </div>
+  </a>
+
+  <!-- Home Link (Optional - uncomment if you want it) -->
+  <!-- <div class="home-section">
+    <a
+      href="/"
+      class:list={['utility-item', { active: currentPage === 'home' }]}
+    >
+      Home
+    </a>
+  </div> -->
 
   <!-- Projects Section -->
   <div class="projects-section">
@@ -65,10 +77,23 @@ const utilityPages = [
     padding: 0;
   }
 
+  /* Clickable Header Link */
+  .sidebar-header-link {
+    text-decoration: none;
+    color: white;
+    transition: background 0.2s ease;
+  }
+
+  .sidebar-header-link:hover .sidebar-header {
+    background: rgba(255, 255, 255, 0.03);
+    text-decoration:underline #10b981 2px;
+  }
+
   /* Sidebar Header */
   .sidebar-header {
     padding: 32px 24px 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s ease;
   }
 
   .sidebar-header h1 {
@@ -83,6 +108,12 @@ const utilityPages = [
     font-size: 15px;
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
+  }
+
+  /* Optional Home Section (commented out by default) */
+  .home-section {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* Projects Section */

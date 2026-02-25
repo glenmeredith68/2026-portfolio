@@ -1,7 +1,79 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Sidebar from "../components/sidebar.astro";
 ---
 
-<script>
-  // Redirect to about page
-  window.location.href = '/about';
-</script>
+<Layout title="Glen Meredith | UX Designer & Researcher">
+    <div class="flex h-screen">
+        <Sidebar currentPage="home" />
+        
+        <div class="flex-1 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-auto">
+            <div class="max-w-3xl w-full px-6 py-16">
+                
+                <!-- Main Content -->
+                <div class="text-center mb-12">
+                    <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">
+                        Welcome
+                    </h1>
+                    <p class="text-2xl md:text-3xl text-gray-600 font-light mb-6">
+                        I'm Glen, a UX designer who believes research should drive design decisions.
+                    </p>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Currently seeking product design and UX roles where I can leverage research to solve real problems.
+                    </p>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="flex justify-center mb-16">
+                    <a 
+                        href="/magic-mirror" 
+                        class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition shadow-lg hover:shadow-xl"
+                    >
+                        View My Work →
+                    </a>
+                </div>
+
+                <!-- Project Cards -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Magic Mirror -->
+                    <a 
+                        href="/magic-mirror" 
+                        class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                    >
+                        <div class="aspect-video bg-gradient-to-br from-green-700 to-teal-800 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-white text-4xl">🪞</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-green-600 transition">Magic Mirror</h3>
+                        <p class="text-gray-600 text-sm">UX Design • 2 Weeks</p>
+                    </a>
+
+                    <!-- National Park -->
+                    <a 
+                        href="/national-park" 
+                        class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                    >
+                        <div class="aspect-video bg-gradient-to-br from-amber-700 to-orange-800 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-white text-4xl">🏞️</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-green-600 transition">National Park App</h3>
+                        <p class="text-gray-600 text-sm">Product Design • 4 Weeks</p>
+                    </a>
+
+                    <!-- Family Promise -->
+                    <a 
+                        href="/family-promise" 
+                        class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                    >
+                        <div class="aspect-video bg-gradient-to-br from-blue-700 to-cyan-700 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-white text-4xl">📊</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-green-600 transition">Family Promise</h3>
+                        <p class="text-gray-600 text-sm">UX Research • 5 Weeks</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</Layout>
