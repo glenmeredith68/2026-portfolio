@@ -7,73 +7,186 @@ import Sidebar from "../components/sidebar.astro";
 <Layout title="Glen Meredith | UX Designer & Researcher">
     <div class="flex h-screen">
         <Sidebar currentPage="home" />
-        
-        <div class="flex-1 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-auto">
-            <div class="max-w-3xl w-full px-6 py-16">
-                
-                <!-- Main Content -->
-                <div class="text-center mb-12">
-                    <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">
-                        Welcome
-                    </h1>
-                    <p class="text-2xl md:text-3xl text-gray-600 font-light mb-6">
-                        I'm Glen, a UX designer who believes research should drive design decisions.
-                    </p>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                        Currently seeking product design and UX roles where I can leverage research to solve real problems.
-                    </p>
-                </div>
 
-                <!-- CTA Button -->
-                <div class="flex justify-center mb-16">
-                    <a 
-                        href="/magic-mirror" 
-                        class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition shadow-lg hover:shadow-xl"
+        <div class="flex-1 bg-white p-8 overflow-auto">
+            <div id="content" class="max-w-7xl mx-auto px-6">
+                <!-- Hero Section -->
+                <div class="py-16 mb-16">
+                    <h1
+                        class="text-6xl md:text-7xl font-black mb-8 leading-tight"
+                    >
+                        Glen Meredith
+                    </h1>
+                    <p
+                        class="text-2xl md:text-3xl text-gray-600 font-light mb-6 max-w-3xl"
+                    >
+                        I'm a UX designer who believes research should drive
+                        design decisions.
+                    </p>
+                    <p
+                        class="text-xl text-gray-600 max-w-2xl leading-relaxed mb-8"
+                    >
+                        Currently seeking product design and UX roles where I
+                        can leverage research to solve real problems.
+                    </p>
+                    <a
+                        href="/magic-mirror"
+                        class="inline-block bg-gradient-to-r from-[#10573d] to-[#064e3b] text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-[#064e3b] hover:to-[#047857] transition shadow-lg hover:shadow-xl"
                     >
                         View My Work →
                     </a>
                 </div>
 
-                <!-- Project Cards -->
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Magic Mirror -->
-                    <a 
-                        href="/magic-mirror" 
-                        class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
-                    >
-                        <div class="aspect-video bg-gradient-to-br from-green-700 to-teal-800 rounded-lg mb-4 flex items-center justify-center">
-                            <span class="text-white text-4xl">🪞</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-green-600 transition">Magic Mirror</h3>
-                        <p class="text-gray-600 text-sm">UX Design • 2 Weeks</p>
-                    </a>
+                <!-- Projects Grid -->
+                <div class="mb-24">
+                    <h2 class="text-4xl font-black mb-8">Selected Projects</h2>
 
-                    <!-- National Park -->
-                    <a 
-                        href="/national-park" 
-                        class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
-                    >
-                        <div class="aspect-video bg-gradient-to-br from-amber-700 to-orange-800 rounded-lg mb-4 flex items-center justify-center">
-                            <span class="text-white text-4xl">🏞️</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-green-600 transition">National Park App</h3>
-                        <p class="text-gray-600 text-sm">Product Design • 4 Weeks</p>
-                    </a>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Magic Mirror -->
+                        <a
+                            href="/magic-mirror"
+                            class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100"
+                        >
+                            <div
+                                class="aspect-video overflow-hidden bg-gray-100"
+                            >
+                                <img
+                                    src="/mm-hero-75.webp"
+                                    alt="Magic Mirror interface"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-bold mb-2 group-hover:text-green-600 transition"
+                                >
+                                    Magic Mirror
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    UX Design • 2 Weeks
+                                </p>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Smart closet interface combining weather,
+                                    schedule, and wardrobe in one glanceable
+                                    view.
+                                </p>
+                            </div>
+                        </a>
 
-                    <!-- Family Promise -->
-                    <a 
-                        href="/family-promise" 
-                        class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
-                    >
-                        <div class="aspect-video bg-gradient-to-br from-blue-700 to-cyan-700 rounded-lg mb-4 flex items-center justify-center">
-                            <span class="text-white text-4xl">📊</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-green-600 transition">Family Promise</h3>
-                        <p class="text-gray-600 text-sm">UX Research • 5 Weeks</p>
-                    </a>
+                        <!-- National Park -->
+                        <a
+                            href="/national-park"
+                            class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100"
+                        >
+                            <div
+                                class="aspect-video overflow-hidden bg-gray-100"
+                            >
+                                <img
+                                    src="/np-hero.webp"
+                                    alt="National Park App interface"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-bold mb-2 group-hover:text-green-600 transition"
+                                >
+                                    National Park App
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Product Design • 4 Weeks
+                                </p>
+                                <p class="text-gray-700 leading-relaxed">
+                                    AR-powered gamification making national
+                                    parks accessible and exciting for newcomers.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Family Promise -->
+                        <a
+                            href="/family-promise"
+                            class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100"
+                        >
+                            <div
+                                class="aspect-video overflow-hidden bg-gray-100"
+                            >
+                                <img
+                                    src="/fp-hero.webp"
+                                    alt="Family Promise sitemap comparison"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-bold mb-2 group-hover:text-green-600 transition"
+                                >
+                                    Family Promise
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    UX Research • 5 Weeks
+                                </p>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Using card sorting and data visualization to
+                                    transform a nonprofit website.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
+                <!-- Quick Links Section -->
+                <div class="pb-16">
+                    <div class="bg-gray-50 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold mb-6">
+                            Want to know more?
+                        </h2>
+                        <div class="flex flex-wrap gap-4">
+                            <a
+                                href="/about"
+                                class="inline-block bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition border border-gray-200"
+                            >
+                                Read my story →
+                            </a>
+                            <a
+                                href="/contact"
+                                class="inline-block bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition border border-gray-200"
+                            >
+                                Get in touch →
+                            </a>
+                            <a
+                                href="mailto:glen.lee.meredith@gmail.com"
+                                class="inline-block bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition border border-gray-200"
+                            >
+                                glen.lee.meredith@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </Layout>
+
+<script>
+    // Scroll reveal observer
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+
+    if (revealElements.length > 0) {
+        const scrollObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("revealed");
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+                rootMargin: "0px 0px -100px 0px",
+            },
+        );
+
+        revealElements.forEach((el) => scrollObserver.observe(el));
+    }
+</script>
