@@ -32,8 +32,59 @@ const utilityPages = [
 ];
 ---
 
-<div class="sidebar">
-  <!-- Header - Clickable -->
+<!-- =============================================
+     MOBILE TOP BAR (hidden on desktop)
+     ============================================= -->
+<div class="mobile-topbar" role="banner">
+  <button
+    class="hamburger-btn"
+    id="drawerToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="navDrawer"
+  >
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <a href="/" class="mobile-logo" aria-label="Glen Meredith – Home">
+    Glen Meredith
+  </a>
+
+  <!-- Spacer keeps logo centered -->
+  <div class="topbar-spacer" aria-hidden="true"></div>
+</div>
+
+<!-- =============================================
+     BACKDROP OVERLAY
+     ============================================= -->
+<div
+  class="drawer-backdrop"
+  id="drawerBackdrop"
+  aria-hidden="true"
+  tabindex="-1"
+></div>
+
+<!-- =============================================
+     SLIDE-OUT DRAWER (mobile) + STATIC SIDEBAR (desktop)
+     ============================================= -->
+<nav
+  class="sidebar"
+  id="navDrawer"
+  aria-label="Site navigation"
+  aria-hidden="true"
+>
+  <!-- Close button (mobile only) -->
+  <button
+    class="drawer-close"
+    id="drawerClose"
+    aria-label="Close navigation menu"
+  >
+    &#x2715;
+  </button>
+
+  <!-- Header – clickable back to home -->
   <a href="/" class="sidebar-header-link">
     <div class="sidebar-header">
       <h1>Glen Meredith</h1>
@@ -41,13 +92,14 @@ const utilityPages = [
     </div>
   </a>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <div class="projects-section">
     {
       projects.map((project) => (
         <a
           href={project.url}
           class:list={["project-item", { active: currentPage === project.id }]}
+          aria-current={currentPage === project.id ? "page" : undefined}
         >
           <div class="project-title">{project.title}</div>
           <div class="project-meta">{project.meta}</div>
@@ -56,26 +108,131 @@ const utilityPages = [
     }
   </div>
 
-  <!-- Divider -->
-  <div class="menu-divider"></div>
+  <div class="menu-divider" aria-hidden="true"></div>
 
-  <!-- Utility Section - BACK BELOW PROJECTS -->
+  <!-- Utility pages -->
   <div class="utility-section">
     {
       utilityPages.map((page) => (
         <a
           href={page.url}
           class:list={["utility-item", { active: currentPage === page.id }]}
+          aria-current={currentPage === page.id ? "page" : undefined}
         >
           {page.title}
         </a>
       ))
     }
   </div>
-</div>
+</nav>
 
 <style>
-  /* Sidebar Base - TRUE DARK GRAY */
+  /* ── Fonts ── */
+  .sidebar h1,
+  .project-title {
+    font-family: "Crimson Pro", serif;
+  }
+
+  /* ══════════════════════════════════════════
+     MOBILE TOP BAR
+  ══════════════════════════════════════════ */
+  .mobile-topbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    height: 56px;
+    background: #1a1a1a;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-logo {
+    font-family: "Crimson Pro", serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .topbar-spacer {
+    width: 44px;
+  }
+
+  /* ── Hamburger button ── */
+  .hamburger-btn {
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+
+  .hamburger-btn:hover,
+  .hamburger-btn:focus-visible {
+    background: rgba(255, 255, 255, 0.08);
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+  }
+
+  .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    transform-origin: center;
+  }
+
+  /* Animate hamburger → × when open */
+  .hamburger-btn[aria-expanded="true"] .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger-btn[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .hamburger-btn[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* ══════════════════════════════════════════
+     BACKDROP
+  ══════════════════════════════════════════ */
+  .drawer-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 298;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+  }
+
+  .drawer-backdrop.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* ══════════════════════════════════════════
+     SIDEBAR – DESKTOP (static)
+  ══════════════════════════════════════════ */
   .sidebar {
     width: 280px;
     background: #1a1a1a;
@@ -83,9 +240,16 @@ const utilityPages = [
     display: flex;
     flex-direction: column;
     padding: 0;
+    flex-shrink: 0;
+    /* aria-hidden="true" is correct for desktop (it's visible, not a modal) */
   }
 
-  /* Clickable Header Link */
+  /* ── Close button – desktop hidden ── */
+  .drawer-close {
+    display: none;
+  }
+
+  /* ── Header ── */
   .sidebar-header-link {
     text-decoration: none;
     color: white;
@@ -97,7 +261,6 @@ const utilityPages = [
     text-decoration: underline #10b981 2px;
   }
 
-  /* Sidebar Header */
   .sidebar-header {
     padding: 32px 24px 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -105,7 +268,6 @@ const utilityPages = [
   }
 
   .sidebar-header h1 {
-    font-family: "Crimson Pro", serif;
     font-size: 28px;
     font-weight: 800;
     margin-bottom: 6px;
@@ -116,9 +278,10 @@ const utilityPages = [
     font-size: 15px;
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
+    font-family: "DM Sans", sans-serif;
   }
 
-  /* Projects Section */
+  /* ── Projects ── */
   .projects-section {
     padding: 8px 0;
     flex: 1;
@@ -126,16 +289,12 @@ const utilityPages = [
 
   .project-item {
     display: block;
-    width: 100%;
-    text-align: left;
     padding: 18px 24px;
-    border: none;
-    background: transparent;
     border-left: 4px solid transparent;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    background: transparent;
     color: white;
     text-decoration: none;
+    transition: all 0.2s ease;
   }
 
   .project-item:hover {
@@ -148,8 +307,12 @@ const utilityPages = [
     border-left-color: #10b981;
   }
 
+  .project-item:focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: -2px;
+  }
+
   .project-title {
-    font-family: "Crimson Pro", serif;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 4px;
@@ -162,42 +325,244 @@ const utilityPages = [
     color: rgba(255, 255, 255, 0.5);
     font-weight: 400;
     line-height: 1.4;
+    font-family: "DM Sans", sans-serif;
   }
 
-  /* Divider */
+  /* ── Divider ── */
   .menu-divider {
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
     margin: 12px 0;
   }
 
-  /* Utility Section - MORE PROMINENT */
+  /* ── Utility links ── */
   .utility-section {
     padding: 8px 0 24px;
   }
 
   .utility-item {
     display: block;
-    width: 100%;
-    text-align: left;
-    padding: 16px 24px; /* increased from 14px */
-    border: none;
+    padding: 16px 24px;
     background: transparent;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 16px; /* increased from 15px */
-    font-weight: 600; /* increased from 500 */
-    color: rgba(255, 255, 255, 0.85); /* slightly brighter */
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: "DM Sans", sans-serif;
   }
 
   .utility-item:hover {
     background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 1);
+    color: white;
   }
 
   .utility-item.active {
     background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 1);
+    color: white;
+  }
+
+  .utility-item:focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: -2px;
+  }
+
+  /* ══════════════════════════════════════════
+     MOBILE OVERRIDES (≤ 767px)
+  ══════════════════════════════════════════ */
+  @media (max-width: 767px) {
+    /* Show top bar */
+    .mobile-topbar {
+      display: flex;
+    }
+
+    /* Show close button inside drawer */
+    .drawer-close {
+      display: flex;
+      align-self: flex-end;
+      margin: 12px 12px 0;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      line-height: 1;
+    }
+
+    .drawer-close:hover,
+    .drawer-close:focus-visible {
+      background: rgba(255, 255, 255, 0.16);
+      outline: 2px solid #10b981;
+      outline-offset: 2px;
+    }
+
+    /* Show backdrop */
+    .drawer-backdrop {
+      display: block;
+    }
+
+    /* Convert sidebar into fixed drawer */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 299;
+      width: 75vw;
+      max-width: 320px;
+      /* GPU-accelerated: starts off-screen */
+      transform: translateX(-100%);
+      /* Open: ease-out (feels snappy) | Close: ease-in (feels intentional) */
+      transition: transform 0.25s ease-out, visibility 0s linear 0.25s;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      visibility: hidden;
+    }
+
+    .sidebar.open {
+      transform: translateX(0);
+      /* Remove the visibility delay when opening */
+      transition: transform 0.25s ease-out, visibility 0s linear 0s;
+      visibility: visible;
+    }
+
+    /* Reduce top padding since close button is there */
+    .sidebar-header {
+      padding-top: 12px;
+    }
   }
 </style>
+
+<script>
+  const toggle = document.getElementById("drawerToggle") as HTMLButtonElement;
+  const closeBtn = document.getElementById("drawerClose") as HTMLButtonElement;
+  const drawer = document.getElementById("navDrawer") as HTMLElement;
+  const backdrop = document.getElementById("drawerBackdrop") as HTMLElement;
+
+  const focusableSelectors =
+    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+  let startX = 0;
+  let isDragging = false;
+
+  function openDrawer() {
+    drawer.classList.add("open");
+    backdrop.classList.add("visible");
+    toggle.setAttribute("aria-expanded", "true");
+    drawer.setAttribute("aria-hidden", "false");
+    backdrop.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    // Focus first focusable element inside drawer
+    const firstFocusable = drawer.querySelector<HTMLElement>(focusableSelectors);
+    firstFocusable?.focus();
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove("open");
+    backdrop.classList.remove("visible");
+    toggle.setAttribute("aria-expanded", "false");
+    drawer.setAttribute("aria-hidden", "true");
+    backdrop.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    drawer.style.transform = "";
+    backdrop.style.opacity = "";
+
+    // Return focus to toggle
+    toggle.focus();
+  }
+
+  // Open / close via hamburger
+  toggle?.addEventListener("click", () => {
+    drawer.classList.contains("open") ? closeDrawer() : openDrawer();
+  });
+
+  // Close via × button
+  closeBtn?.addEventListener("click", closeDrawer);
+
+  // Close via backdrop tap
+  backdrop?.addEventListener("click", closeDrawer);
+
+  // Close via Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && drawer.classList.contains("open")) {
+      closeDrawer();
+    }
+  });
+
+  // ── Focus trap ──
+  drawer?.addEventListener("keydown", (e) => {
+    if (e.key !== "Tab" || !drawer.classList.contains("open")) return;
+
+    const focusable = Array.from(
+      drawer.querySelectorAll<HTMLElement>(focusableSelectors)
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  // ── Swipe-left to close ──
+  drawer?.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    },
+    { passive: true }
+  );
+
+  drawer?.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!isDragging) return;
+      const deltaX = e.touches[0].clientX - startX;
+      if (deltaX < 0) {
+        // Override CSS transition during drag for instant finger tracking
+        drawer.style.transition = "none";
+        drawer.style.transform = `translateX(${deltaX}px)`;
+        const progress = Math.min(
+          Math.abs(deltaX) / (window.innerWidth * 0.75),
+          1
+        );
+        backdrop.style.opacity = String(1 - progress * 0.85);
+      }
+    },
+    { passive: true }
+  );
+
+  drawer?.addEventListener("touchend", (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    const deltaX = e.changedTouches[0].clientX - startX;
+
+    // Restore CSS transition
+    drawer.style.transition = "";
+
+    if (deltaX < -80) {
+      // Committed swipe – close
+      closeDrawer();
+    } else {
+      // Not far enough – snap back open
+      drawer.style.transform = "";
+      backdrop.style.opacity = "";
+    }
+  });
+</script>

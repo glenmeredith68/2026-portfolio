@@ -102,3 +102,34 @@ h1, h2, h3, h4 {
         transform: none;
     }
 }
+
+/* =============================================
+   PAGE LAYOUT – desktop sidebar + mobile drawer
+   ============================================= */
+
+.page-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+  background: white;
+  overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .page-wrapper {
+    /* Sidebar is position:fixed on mobile, so wrapper is a single column */
+    display: block;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .page-content {
+    /* Push content below the fixed 56px mobile top bar */
+    padding-top: 56px;
+    overflow-y: unset;
+    height: auto;
+  }
+}
